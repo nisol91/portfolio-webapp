@@ -1,0 +1,23 @@
+[debug] [2019-12-08T20:29:05.481Z] ----------------------------------------------------------------------
+[debug] [2019-12-08T20:29:05.483Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-12-08T20:29:05.483Z] CLI Version:   7.8.1
+[debug] [2019-12-08T20:29:05.483Z] Platform:      darwin
+[debug] [2019-12-08T20:29:05.483Z] Node Version:  v12.13.0
+[debug] [2019-12-08T20:29:05.484Z] Time:          Sun Dec 08 2019 21:29:05 GMT+0100 (Central European Standard Time)
+[debug] [2019-12-08T20:29:05.484Z] ----------------------------------------------------------------------
+[debug] [2019-12-08T20:29:05.484Z] 
+[debug] [2019-12-08T20:29:05.492Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-08T20:29:05.492Z] > authorizing via signed-in user
+[debug] [2019-12-08T20:29:05.492Z] [iam] checking project portfolio-f8a45 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-12-08T20:29:05.493Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-f8a45:testIamPermissions  
+
+[debug] [2019-12-08T20:29:06.446Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-08T20:29:06.448Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/portfolio-f8a45  
+ 
+[debug] [2019-12-08T20:29:06.793Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'portfolio-f8a45'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-12-08T20:29:06.796Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/portfolio-f8a45/versions  
+

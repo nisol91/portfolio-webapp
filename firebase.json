@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "echo-frontend-react",
+    "site": "portfolio-f8a45",
     "public": "build",
     "ignore": [
       "firebase.json",

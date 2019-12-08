@@ -1,6 +1,5 @@
 {
   "projects": {
-    "default": "echo-frontend-react",
-    "echoweb": "test-87a0f"
+    "default": "portfolio-f8a45"
   }
 }
