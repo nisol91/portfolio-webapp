@@ -1,0 +1,259 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+
+//height
+@media (max-height: 800px) {
+
+
+	.main {
+		overflow-y: scroll !important;
+	}
+
+	.mylink {
+		margin-top: 10px !important;
+	}
+
+	.socialIcons {
+		margin-top: 20px !important;
+
+		a {
+			margin-top: 5px !important;
+
+		}
+	}
+}
+
+//super extra small
+@media (min-width: 300px) {
+
+
+	#s,
+	#t,
+	#c {
+		width: 250px !important;
+		height: 250px !important;
+	}
+}
+
+// Extra Small devices (landscape phones, 576px and up)
+@media (min-width: 450px) {
+
+	#s,
+	#t,
+	#c {
+		width: 250px !important;
+		height: 250px !important;
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+	#s,
+	#t,
+	#c {
+		width: 300px !important;
+		height: 300px !important;
+	}
+
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.boxPortfolio {
+		flex-direction: row;
+	}
+
+
+
+	#s,
+	#t,
+	#c {
+		width: 400px !important;
+		height: 400px !important;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.works {
+		width: 60% !important;
+	}
+
+	.textPortfolio {
+		width: 40% !important;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1300px) {
+
+	#s,
+	#t,
+	#c {
+		width: 500px !important;
+		height: 500px !important;
+	}
+}
+
+@media (min-width: 1400px) {
+
+	#s,
+	#t,
+	#c {
+		width: 700px !important;
+		height: 700px !important;
+	}
+}
+
+
+//==========
+
+//Super extra small
+@media (max-width: 450px) {
+	.contact2 {
+		font-size: 35px !important;
+	}
+
+	.logosPortfolio {
+		width: 60px !important;
+		margin: 5px !important;
+	}
+}
+
+// Extra Small devices (landscape phones, 576px and down)
+@media (max-width: 576px) {
+	.progress {
+
+		margin-top: 300px !important;
+	}
+
+	.navCont {
+		width: 10px !important;
+	}
+
+	.cardCont {
+		width: 100px !important;
+		height: 100px !important;
+	}
+
+	.show {
+		height: 50px !important;
+		width: 50px !important;
+		top: 25px !important;
+		left: 25px !important;
+	}
+
+
+	.myBarsCont {
+		opacity: 1 !important;
+
+		.myBars {
+			width: 40px !important;
+			height: 40px !important;
+		}
+	}
+
+	.mynavbar {
+		transform: translateX(-150px) !important;
+		opacity: .95;
+	}
+
+
+
+	.home1,
+	.skills1,
+	.about1 {
+		font-size: 50px !important;
+	}
+
+	.home2,
+	.skills2,
+	.about2 {
+		font-size: 40px !important;
+
+	}
+
+	.home3,
+	.skills3,
+	.about3 {
+		font-size: 25px !important;
+	}
+
+	.Toastify__toast--default {
+		width: 50% !important;
+		height: 20px !important;
+	}
+
+	.Toastify__toast {
+		font-size: 10px !important;
+	}
+
+}
+
+// Small devices (tablets, 768px and down)
+@media (max-width: 768px) {
+
+
+
+	.boxHome,
+	.boxSkills {
+		padding: 40px !important;
+	}
+
+
+}
+
+// Medium devices (desktops, 992px and down)
+@media (max-width: 992px) {
+	.close-container {
+		display: none !important;
+	}
+
+	.skills1,
+	.skills2,
+	.skills3 {
+
+		margin-top: 20px !important;
+	}
+
+	.skillssx {
+		width: 100% !important;
+	}
+
+	.boxPortfolio {
+		flex-direction: column;
+	}
+
+	.works {
+		width: 100% !important;
+		margin-top: 0px !important;
+
+	}
+
+	.textPortfolio {
+		width: 100% !important;
+	}
+
+	.port1 {
+		font-size: 50px !important;
+	}
+
+	.port2 {
+		font-size: 30px !important;
+
+	}
+
+
+
+	.boxHome,
+	.boxSkills,
+	.boxAbout {
+		display: block !important;
+	}
+}
+
+// Large devices (large desktops, 1200px and down)
+@media (max-width: 1200px) and (min-width: 768px) {}

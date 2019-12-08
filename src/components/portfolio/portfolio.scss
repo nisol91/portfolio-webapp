@@ -1,0 +1,63 @@
+@import "./src/scss/variables";
+
+//portfolio==========================
+.boxPortfolio {
+	width: 95%;
+	height: auto;
+	margin: auto;
+	margin-top: 50px;
+	display: flex;
+
+	.works {
+		width: 60%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 150px;
+		overflow: auto;
+		height: 500px;
+	}
+
+	.textPortfolio {
+		width: 40%;
+
+		.port1 {
+			font-size: 70px;
+			font-weight: bold;
+		}
+
+		.port2 {
+			font-size: 50px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
+		.port3 {
+			font-size: 25px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
+		.port4 {
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+	}
+}
+
+.logosPortfolio {
+	width: 80px;
+	margin: 10px;
+}
+
+.progress {
+	width: 60% !important;
+	margin: auto;
+	margin-top: 20%;
+	height: 5px !important;
+	background: $nav-background-color !important;
+}
+
+.progress-bar {
+	background-color: $link-color !important;
+}

@@ -1,0 +1,29 @@
+@import "./src/scss/variables";
+
+.boxAbout {
+	display: flex;
+
+	.aboutcontainer {
+		padding: 30px;
+		margin-left: 10%;
+		margin-top: 100px;
+		margin-right: 15%;
+
+		.about1 {
+			font-size: 70px;
+			font-weight: bold;
+		}
+
+		.about2 {
+			font-size: 50px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
+		.about3 {
+			font-size: 30px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+	}
+}
