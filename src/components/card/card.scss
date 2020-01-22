@@ -8,7 +8,7 @@ $card-height: 200px;
 	height: $card-height;
 	background: grey;
 	margin: 5px;
-	overflow: hidden;
+	overflow: auto;
 	position: relative;
 
 	.imgSpinner {

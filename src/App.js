@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/home/home";
 import About from "./components/about/about";
+import Contact from "./components/contact/contact";
 
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
@@ -26,6 +27,7 @@ class App extends Component {
             <div className="main" onClick={this.hideNav}>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
+              <Route path="/contact-me" component={Contact} />
             </div>
           </div>
         </Router>
