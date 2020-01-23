@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import Sphere from "../sphere";
 import { Link } from "react-router-dom";
 import "./home.scss";
+import Contact from "../contact/contact";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { translate } from "react-i18next";
+import scrollToComponent from "react-scroll-to-component";
 
 import firebase from "firebase";
 
@@ -75,6 +77,7 @@ class Home extends Component {
     // if (this.state.slide) {
     //   className_1 += " ";
     // }
+
     const { t } = this.props;
 
     return (
@@ -83,7 +86,16 @@ class Home extends Component {
           <h1 className="home1 text-flicker-in-glow">Hey</h1>
           <h1 className="home2 tracking-in-expand">{t("this_is_downhill")}</h1>
           <h1 className="home3 swing-in-top-fwd">{t("what_we_love")}</h1>
-          <Link to={"/contact-me"} className="mylink">
+          <Link
+            className="mylink"
+            onClick={() =>
+              scrollToComponent(this.contactRef, {
+                offset: 0,
+                align: "top",
+                duration: 1500
+              })
+            }
+          >
             <div className="myBtnContact swing-in-top-fwd">{t("contacts")}</div>
           </Link>
           <div
@@ -92,6 +104,11 @@ class Home extends Component {
           >
             add project
           </div>
+          <Contact
+            ref={section => {
+              this.contactRef = section;
+            }}
+          ></Contact>
         </div>
 
         <div className={`fade-in ${this.state.cubeVisibility && "visible"}`}>
