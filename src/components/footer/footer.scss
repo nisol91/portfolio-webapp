@@ -1,0 +1,11 @@
+@import "src/scss/variables";
+
+* {
+	box-sizing: border-box;
+}
+
+.footer {
+	width: 100%;
+	height: 200px;
+	background: $nav-background-color;
+}

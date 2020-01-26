@@ -1,17 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Spinner, Alert } from "reactstrap";
-import "./contact.scss";
+import "./footer.scss";
 import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 import { translate } from "react-i18next";
 
-const API_PATH = "http://localhost:4040/form/add";
-const Map = ReactMapboxGl({
-  accessToken:
-    "pk.eyJ1Ijoibmlzb2w5MSIsImEiOiJjazBjaWRvbTIwMWpmM2hvMDhlYWhhZGV0In0.wyRaVw6FXdw6g3wp3t9FNQ"
-});
-
-class Contact extends Component {
+class Footer extends Component {
   constructor(props) {
     super(props);
 
@@ -32,7 +26,6 @@ class Contact extends Component {
     e.preventDefault();
     axios({
       method: "post",
-      url: `${API_PATH}`,
       headers: { "content-type": "application/json" },
       data: this.state
     })
@@ -67,12 +60,10 @@ class Contact extends Component {
 
     return (
       <div>
-        <h1 className="contact2 tracking-in-expand">Stay in touch</h1>
-
-        <h1 className="contact2 tracking-in-expand">{t("contact_form")}</h1>
+        <h1 className="footer"></h1>
       </div>
     );
   }
 }
 // export default Contact;
-export default translate()(Contact);
+export default translate()(Footer);

@@ -7,6 +7,7 @@ import scrollToComponent from "react-scroll-to-component";
 import "./portfolio_sp.scss";
 import Contact from "../contact/contact";
 import Projects from "../projects/projects";
+import Footer from "../footer/footer";
 
 import firebase from "firebase";
 
@@ -30,7 +31,9 @@ class PortfolioSp extends Component {
     this.addProject = this.addProject.bind(this);
     this.state = {
       cubeVisibility: false,
-      toggleClass: true
+      toggleClass: true,
+      scrollProjects: false,
+      scrollContacts: false
     };
   }
   notify = () => toast("Scroll to zoom and drag to move!");
@@ -47,6 +50,12 @@ class PortfolioSp extends Component {
   }
 
   handleScroll = () => {
+    if (window.scrollY > "100") {
+      this.setState({ scrollProjects: true });
+    }
+    if (window.scrollY > "300") {
+      this.setState({ scrollContacts: true });
+    }
     console.log(window.scrollY);
   };
   async fetchProjects() {
@@ -123,12 +132,15 @@ class PortfolioSp extends Component {
           </div>
         </div>
 
-        <Projects></Projects>
-        <Contact
-          ref={section => {
-            this.contactRef = section;
-          }}
-        ></Contact>
+        {this.state.scrollProjects ? <Projects></Projects> : null}
+        {this.state.scrollContacts ? (
+          <Contact
+            ref={section => {
+              this.contactRef = section;
+            }}
+          ></Contact>
+        ) : null}
+        <Footer></Footer>
         <div className="boxContacts"></div>
       </div>
     );

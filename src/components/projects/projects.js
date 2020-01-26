@@ -127,24 +127,29 @@ class Projects extends Component {
           className={`boxPortfolio fade-in ${this.state.barDidMount &&
             "visible"}`}
         >
-          <div
-            className={`textPortfolio  ${this.state.projectsVisibility &&
-              "visible slide-in-tr"}`}
-          >
-            <h1 className="port1">{t("the_work")}</h1>
-            <h1 className="port2">Check it out</h1>
-            <h3 className="port3">
-              And visit my
-              <a href="https://github.com/nisol91?tab=repositories"> GitHub </a>
-              page
-            </h3>
+          {this.state.projectsVisibility ? (
+            <div
+              className={`textPortfolio ${this.state.projectsVisibility &&
+                "visible slide-in-tr"}`}
+            >
+              <h1 className="port1">{t("the_work")}</h1>
+              <h1 className="port2">Check it out</h1>
+              <h3 className="port3">
+                And visit my
+                <a href="https://github.com/nisol91?tab=repositories">
+                  {" "}
+                  GitHub{" "}
+                </a>
+                page
+              </h3>
 
-            <h3 className="port4">This webapp was made with:</h3>
-            <div className="logportBox">
-              <img class="logosPortfolio" src={reactLogo} alt="" />
-              <img class="logosPortfolio" src={firebaseLogo} alt="" />
+              <h3 className="port4">This webapp was made with:</h3>
+              <div className="logportBox">
+                <img class="logosPortfolio" src={reactLogo} alt="" />
+                <img class="logosPortfolio" src={firebaseLogo} alt="" />
+              </div>
             </div>
-          </div>
+          ) : null}
           <div
             className={`works fade-in ${this.state.projectsVisibility &&
               "visible"}`}
