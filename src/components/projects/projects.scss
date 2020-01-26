@@ -2,17 +2,15 @@
 
 //portfolio==========================
 .boxPortfolio {
-	width: 95%;
+	width: 100%;
 	height: auto;
-	margin: auto;
-	margin-top: 50px;
+	margin: 50px 100px;
 	display: flex;
 
 	.works {
 		width: 60%;
 		display: flex;
 		flex-wrap: wrap;
-		margin-top: 150px;
 		overflow: auto;
 		height: auto;
 	}

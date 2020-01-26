@@ -8,6 +8,8 @@ import "./portfolio_sp.scss";
 import Contact from "../contact/contact";
 import Projects from "../projects/projects";
 import Footer from "../footer/footer";
+import About from "../about/about";
+import Skills from "../skills/skills";
 
 import firebase from "firebase";
 
@@ -102,13 +104,17 @@ class PortfolioSp extends Component {
           <h1 className="home3 swing-in-top-fwd">{t("what_we_love")}</h1>
           <Link
             className="mylink"
-            onClick={() =>
-              scrollToComponent(this.contactRef, {
-                offset: 0,
-                align: "top",
-                duration: 1500
-              })
-            }
+            onClick={() => {
+              this.setState({ scrollContacts: true });
+
+              setTimeout(() => {
+                scrollToComponent(this.contactRef, {
+                  offset: 200,
+                  align: "bottom",
+                  duration: 1000
+                });
+              }, 100);
+            }}
           >
             <div
               className={`myBtnContact ${this.state.toggleClass &&
@@ -131,8 +137,9 @@ class PortfolioSp extends Component {
             <ToastContainer />
           </div>
         </div>
-
         {this.state.scrollProjects ? <Projects></Projects> : null}
+        <About></About>
+        <Skills></Skills>
         {this.state.scrollContacts ? (
           <Contact
             ref={section => {
@@ -141,7 +148,6 @@ class PortfolioSp extends Component {
           ></Contact>
         ) : null}
         <Footer></Footer>
-        <div className="boxContacts"></div>
       </div>
     );
   }

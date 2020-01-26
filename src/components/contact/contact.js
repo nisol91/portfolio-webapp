@@ -66,10 +66,10 @@ class Contact extends Component {
     const { t } = this.props;
 
     return (
-      <div>
+      <div className="contact">
         <h1 className="contact2 tracking-in-expand">Stay in touch</h1>
 
-        <h1 className="contact2 tracking-in-expand">{t("contact_form")}</h1>
+        <h1 className="contact2 tracking-in-expand">inlandsis871@gmail.com</h1>
       </div>
     );
   }

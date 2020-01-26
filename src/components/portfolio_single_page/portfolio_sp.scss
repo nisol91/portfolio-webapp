@@ -28,7 +28,7 @@
 .boxHome {
 	background: $link-hover-color;
 	width: 100%;
-	padding: 20px;
+	padding: 100px;
 	height: 100vh;
 }
 
@@ -66,5 +66,6 @@
 		transform: translateX(10px);
 		color: $link-color;
 		background: $nav-background-color;
+		text-decoration: line-through;
 	}
 }
