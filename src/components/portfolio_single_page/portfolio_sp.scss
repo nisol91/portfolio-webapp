@@ -26,9 +26,10 @@
 }
 
 .boxHome {
-	background: purple;
+	background: $link-hover-color;
 	width: 100%;
 	padding: 20px;
+	height: 100vh;
 }
 
 .Toastify__toast-container--top-right {

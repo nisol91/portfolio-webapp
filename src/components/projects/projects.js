@@ -2,14 +2,12 @@ import React, { Component } from "react";
 import axios from "axios";
 import Card from "../card/card";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import "./portfolio.scss";
+import "./projects.scss";
 import { translate } from "react-i18next";
-import expressLogo from "../../img/express.png";
-import mongodbLogo from "../../img/mongodb.png";
 import reactLogo from "../../img/react.svg";
 import firebaseLogo from "../../img/firebase_logo.png";
 
-class Portfolio extends Component {
+class Projects extends Component {
   constructor(props) {
     super(props);
 
@@ -130,8 +128,8 @@ class Portfolio extends Component {
             "visible"}`}
         >
           <div
-            className={`textPortfolio slide-in-tr ${this.state
-              .projectsVisibility && "visible"}`}
+            className={`textPortfolio  ${this.state.projectsVisibility &&
+              "visible slide-in-tr"}`}
           >
             <h1 className="port1">{t("the_work")}</h1>
             <h1 className="port2">Check it out</h1>
@@ -166,4 +164,4 @@ class Portfolio extends Component {
     );
   }
 }
-export default translate()(Portfolio);
+export default translate()(Projects);

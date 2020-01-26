@@ -6,7 +6,7 @@ import { translate } from "react-i18next";
 import scrollToComponent from "react-scroll-to-component";
 import "./portfolio_sp.scss";
 import Contact from "../contact/contact";
-import Portfolio from "../portfolio/portfolio";
+import Projects from "../projects/projects";
 
 import firebase from "firebase";
 
@@ -43,8 +43,12 @@ class PortfolioSp extends Component {
       this.notify();
     }, 1500);
     this.fetchProjects();
+    window.addEventListener("scroll", this.handleScroll, true);
   }
 
+  handleScroll = () => {
+    console.log(window.scrollY);
+  };
   async fetchProjects() {
     await db
       .collection("projects")
@@ -113,12 +117,13 @@ class PortfolioSp extends Component {
           </div>
         </div>
 
-        <div className={`fade-in ${this.state.cubeVisibility && "visible"}`}>
+        <div>
           <div>
             <ToastContainer />
           </div>
         </div>
-        <Portfolio></Portfolio>
+
+        <Projects></Projects>
         <Contact
           ref={section => {
             this.contactRef = section;
