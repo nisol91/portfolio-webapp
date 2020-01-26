@@ -14,7 +14,7 @@
 		flex-wrap: wrap;
 		margin-top: 150px;
 		overflow: auto;
-		height: 500px;
+		height: auto;
 	}
 
 	.textPortfolio {
@@ -60,4 +60,8 @@
 
 .progress-bar {
 	background-color: $link-color !important;
+}
+
+.cardCont {
+	overflow: hidden;
 }

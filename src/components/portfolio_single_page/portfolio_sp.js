@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import Sphere from "../sphere";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { translate } from "react-i18next";
 import scrollToComponent from "react-scroll-to-component";
-import "./home.scss";
+import "./portfolio_sp.scss";
 import Contact from "../contact/contact";
+import Portfolio from "../portfolio/portfolio";
+
 import firebase from "firebase";
 
 //inizializzo firebase
@@ -23,12 +24,13 @@ const firebaseApp = firebase.initializeApp({
 const db = firebaseApp.firestore();
 export { db };
 
-class Home extends Component {
+class PortfolioSp extends Component {
   constructor(props) {
     super(props);
     this.addProject = this.addProject.bind(this);
     this.state = {
-      cubeVisibility: false
+      cubeVisibility: false,
+      toggleClass: true
     };
   }
   notify = () => toast("Scroll to zoom and drag to move!");
@@ -37,7 +39,7 @@ class Home extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.setState({ cubeVisibility: true });
+      this.setState({ cubeVisibility: true, toggleClass: false });
       this.notify();
     }, 1500);
     this.fetchProjects();
@@ -80,8 +82,8 @@ class Home extends Component {
     const { t } = this.props;
 
     return (
-      <div className="boxHome">
-        <div>
+      <div className="boxPortfolioSp">
+        <div className="boxHome">
           <h1 className="home1 text-flicker-in-glow">Hey</h1>
           <h1 className="home2 tracking-in-expand">{t("this_is_downhill")}</h1>
           <h1 className="home3 swing-in-top-fwd">{t("what_we_love")}</h1>
@@ -95,30 +97,37 @@ class Home extends Component {
               })
             }
           >
-            <div className="myBtnContact swing-in-top-fwd">{t("contacts")}</div>
+            <div
+              className={`myBtnContact ${this.state.toggleClass &&
+                "swing-in-top-fwd"}`}
+            >
+              {t("contacts")}
+            </div>
           </Link>
           <div
             onClick={this.addProject}
-            className="myBtnContact swing-in-top-fwd"
+            className={`myBtnContact ${this.state.toggleClass &&
+              "swing-in-top-fwd"}`}
           >
             add project
           </div>
-          <Contact
-            ref={section => {
-              this.contactRef = section;
-            }}
-          ></Contact>
         </div>
 
         <div className={`fade-in ${this.state.cubeVisibility && "visible"}`}>
-          <Sphere></Sphere>
           <div>
             <ToastContainer />
           </div>
         </div>
+        <Portfolio></Portfolio>
+        <Contact
+          ref={section => {
+            this.contactRef = section;
+          }}
+        ></Contact>
+        <div className="boxContacts"></div>
       </div>
     );
   }
 }
 
-export default translate()(Home);
+export default translate()(PortfolioSp);

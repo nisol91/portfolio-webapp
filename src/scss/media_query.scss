@@ -3,62 +3,16 @@
 
 
 //height
-@media (max-height: 800px) {
-
-
-	.main {
-		overflow-y: scroll !important;
-	}
-
-	.mylink {
-		margin-top: 10px !important;
-	}
-
-	.socialIcons {
-		margin-top: 20px !important;
-
-		a {
-			margin-top: 5px !important;
-
-		}
-	}
-}
+@media (max-height: 800px) {}
 
 //super extra small
-@media (min-width: 300px) {
-
-
-	#s,
-	#t,
-	#c {
-		width: 250px !important;
-		height: 250px !important;
-	}
-}
+@media (min-width: 300px) {}
 
 // Extra Small devices (landscape phones, 576px and up)
-@media (min-width: 450px) {
-
-	#s,
-	#t,
-	#c {
-		width: 250px !important;
-		height: 250px !important;
-	}
-}
+@media (min-width: 450px) {}
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-
-	#s,
-	#t,
-	#c {
-		width: 300px !important;
-		height: 300px !important;
-	}
-
-
-}
+@media (min-width: 576px) {}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
@@ -68,12 +22,6 @@
 
 
 
-	#s,
-	#t,
-	#c {
-		width: 400px !important;
-		height: 400px !important;
-	}
 }
 
 // Large devices (desktops, 992px and up)
@@ -88,25 +36,9 @@
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1300px) {
+@media (min-width: 1300px) {}
 
-	#s,
-	#t,
-	#c {
-		width: 500px !important;
-		height: 500px !important;
-	}
-}
-
-@media (min-width: 1400px) {
-
-	#s,
-	#t,
-	#c {
-		width: 700px !important;
-		height: 700px !important;
-	}
-}
+@media (min-width: 1400px) {}
 
 
 //==========

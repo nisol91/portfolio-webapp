@@ -7,6 +7,7 @@ import { translate } from "react-i18next";
 import expressLogo from "../../img/express.png";
 import mongodbLogo from "../../img/mongodb.png";
 import reactLogo from "../../img/react.svg";
+import firebaseLogo from "../../img/firebase_logo.png";
 
 class Portfolio extends Component {
   constructor(props) {
@@ -143,8 +144,7 @@ class Portfolio extends Component {
             <h3 className="port4">This webapp was made with:</h3>
             <div className="logportBox">
               <img class="logosPortfolio" src={reactLogo} alt="" />
-              <img class="logosPortfolio" src={mongodbLogo} alt="" />
-              <img class="logosPortfolio" src={expressLogo} alt="" />
+              <img class="logosPortfolio" src={firebaseLogo} alt="" />
             </div>
           </div>
           <div
