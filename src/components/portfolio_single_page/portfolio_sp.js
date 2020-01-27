@@ -52,11 +52,11 @@ class PortfolioSp extends Component {
       aboutVisible: false,
 
       navItems: [
-        { id: 1, name: "Home", ref: "contacts", offset: 10 },
-        { id: 2, name: "Projects", ref: "contacts", offset: 10 },
-        { id: 3, name: "About", ref: "about", offset: 10 },
-        { id: 4, name: "Skills", ref: "skills", offset: 10 },
-        { id: 5, name: "Contact", ref: "contacts", offset: 10 }
+        { id: 1, name: "Home", ref: "home", offset: -30 },
+        { id: 2, name: "Projects", ref: "projects", offset: -70 },
+        { id: 3, name: "About", ref: "about", offset: -30 },
+        { id: 4, name: "Skills", ref: "skills", offset: -70 },
+        { id: 5, name: "Contact", ref: "contacts", offset: -30 }
       ]
     };
   }
@@ -232,32 +232,35 @@ class PortfolioSp extends Component {
           </div>
         </div>
         {this.state.scrollProjects ? (
-          <ScrollTrigger
-            onEnter={this.onEnterViewportProjects}
-            onExit={this.onExitViewportProjects}
-          >
+          <div>
+            <ScrollTrigger
+              onEnter={this.onEnterViewportProjects}
+              onExit={this.onExitViewportProjects}
+            ></ScrollTrigger>
             <Element name="projects">
               <Projects id="projects"></Projects>
             </Element>
-          </ScrollTrigger>
+          </div>
         ) : null}
-        <ScrollTrigger
-          onEnter={this.onEnterViewportAbout}
-          onExit={this.onExitViewportAbout}
-        >
+        <div>
+          <ScrollTrigger
+            onEnter={this.onEnterViewportAbout}
+            onExit={this.onExitViewportAbout}
+          ></ScrollTrigger>
           <Element name="about">
             <About id="about"></About>
           </Element>
-        </ScrollTrigger>
-
-        <ScrollTrigger
-          onEnter={this.onEnterViewportSkills}
-          onExit={this.onExitViewportSkills}
-        >
+        </div>
+        <div>
+          <ScrollTrigger
+            onEnter={this.onEnterViewportSkills}
+            onExit={this.onExitViewportSkills}
+          ></ScrollTrigger>
           <Element name="skills">
             <Skills id="skills"></Skills>
           </Element>
-        </ScrollTrigger>
+        </div>
+
         {this.state.scrollContacts ? (
           <Element name="contacts">
             <Contact id="contact"></Contact>
