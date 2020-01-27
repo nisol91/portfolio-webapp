@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./navbar.scss";
 import i18n from "../../i18n";
 import { withNamespaces } from "react-i18next";
+import scrollToComponent from "react-scroll-to-component";
+import { Link } from "react-router-dom";
 
 // import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +21,14 @@ class Navbar extends Component {
     super(props);
 
     this.state = {
-      toggleNav: false
+      toggleNav: false,
+      navItems: [
+        { id: 1, name: "Home" },
+        { id: 2, name: "Projects" },
+        { id: 3, name: "About" },
+        { id: 4, name: "Skills" },
+        { id: 5, name: "Contact" }
+      ]
     };
   }
 
@@ -47,7 +56,26 @@ class Navbar extends Component {
       <div
         className={`navbar ${this.state.toggleNav && "fixedNav slide-in-top"}`}
       >
-        {" "}
+        {this.state.navItems.map((item, key) => (
+          <Link
+            className="mylink"
+            onClick={() => {
+              this.setState({ scrollContacts: true });
+
+              setTimeout(() => {
+                scrollToComponent(this.contactRef, {
+                  offset: 200,
+                  align: "bottom",
+                  duration: 1000
+                });
+              }, 100);
+            }}
+          >
+            <div className="navItem" key={item.id}>
+              {item.name}
+            </div>
+          </Link>
+        ))}
       </div>
     );
   }

@@ -10,7 +10,15 @@ import Projects from "../projects/projects";
 import Footer from "../footer/footer";
 import About from "../about/about";
 import Skills from "../skills/skills";
-import Navbar from "../navbar/navbar";
+import * as Scroll from "react-scroll";
+import {
+  Link as scrollLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from "react-scroll";
 
 import firebase from "firebase";
 
@@ -36,7 +44,15 @@ class PortfolioSp extends Component {
       cubeVisibility: false,
       toggleClass: true,
       scrollProjects: false,
-      scrollContacts: false
+      scrollContacts: false,
+      toggleNav: false,
+      navItems: [
+        { id: 1, name: "Home", ref: "contacts", offset: 700 },
+        { id: 2, name: "Projects", ref: "contacts", offset: 700 },
+        { id: 3, name: "About", ref: "contacts", offset: 700 },
+        { id: 4, name: "Skills", ref: "contacts", offset: 700 },
+        { id: 5, name: "Contact", ref: "contacts", offset: 700 }
+      ]
     };
   }
   notify = () => toast("Hey, check out my projects");
@@ -52,12 +68,27 @@ class PortfolioSp extends Component {
     window.addEventListener("scroll", this.handleScroll, true);
   }
 
+  scrollTo(element, offset) {
+    scroller.scrollTo(element, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: offset
+    });
+  }
+
   handleScroll = () => {
     if (window.scrollY > "100") {
       this.setState({ scrollProjects: true });
     }
     if (window.scrollY > "300") {
       this.setState({ scrollContacts: true });
+    }
+    if (window.scrollY > "200") {
+      this.setState({ toggleNav: true });
+    }
+    if (window.scrollY < "100") {
+      this.setState({ toggleNav: false });
     }
     console.log(window.scrollY);
   };
@@ -99,7 +130,24 @@ class PortfolioSp extends Component {
 
     return (
       <div className="boxPortfolioSp">
-        <Navbar></Navbar>
+        <div
+          className={`navbar ${this.state.toggleNav &&
+            "fixedNav slide-in-top"}`}
+        >
+          {this.state.navItems.map((item, key) => (
+            <div className="navItem" key={item.id}>
+              <scrollLink
+                className="mylink"
+                onClick={() => {
+                  this.setState({ scrollContacts: true });
+                  this.scrollTo(item.ref, item.offset);
+                }}
+              >
+                {item.name}
+              </scrollLink>
+            </div>
+          ))}
+        </div>
 
         <div className="boxHome">
           <h1 className="home1 text-flicker-in-glow">Hey</h1>
@@ -111,12 +159,8 @@ class PortfolioSp extends Component {
               this.setState({ scrollContacts: true });
 
               setTimeout(() => {
-                scrollToComponent(this.contactRef, {
-                  offset: 200,
-                  align: "bottom",
-                  duration: 1000
-                });
-              }, 100);
+                this.scrollTo("contacts", 700);
+              }, 300);
             }}
           >
             <div
@@ -144,11 +188,9 @@ class PortfolioSp extends Component {
         <About></About>
         <Skills></Skills>
         {this.state.scrollContacts ? (
-          <Contact
-            ref={section => {
-              this.contactRef = section;
-            }}
-          ></Contact>
+          <Element name="contacts">
+            <Contact></Contact>
+          </Element>
         ) : null}
         <Footer></Footer>
       </div>

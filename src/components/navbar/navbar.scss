@@ -14,3 +14,13 @@
 	top: 0;
 	transition: 1s;
 }
+
+.navItem {
+	cursor: pointer;
+
+	&:hover {
+		transform: translateY(-3px);
+		text-decoration: overline;
+
+	}
+}
