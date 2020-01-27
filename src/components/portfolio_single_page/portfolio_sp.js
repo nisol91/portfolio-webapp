@@ -49,6 +49,8 @@ class PortfolioSp extends Component {
       toggleNav: false,
       skillsVisible: false,
       projectsVisible: false,
+      aboutVisible: false,
+
       navItems: [
         { id: 1, name: "Home", ref: "contacts", offset: 10 },
         { id: 2, name: "Projects", ref: "contacts", offset: 10 },
@@ -80,7 +82,19 @@ class PortfolioSp extends Component {
       offset: offset
     });
   }
+  onEnterViewportAbout = () => {
+    this.setState({
+      aboutVisible: true
+    });
+    console.log(this.state.visible);
+  };
 
+  onExitViewportAbout = () => {
+    this.setState({
+      aboutVisible: false
+    });
+    console.log(this.state.visible);
+  };
   onEnterViewportSkills = () => {
     this.setState({
       skillsVisible: true
@@ -166,6 +180,8 @@ class PortfolioSp extends Component {
                   item.name === "Skills" &&
                   "active"} ${this.state.projectsVisible &&
                   item.name === "Projects" &&
+                  "active"} ${this.state.aboutVisible &&
+                  item.name === "About" &&
                   "active"}`}
                 onClick={() => {
                   this.setState({ scrollContacts: true, scrollProjects: true });
@@ -225,10 +241,15 @@ class PortfolioSp extends Component {
             </Element>
           </ScrollTrigger>
         ) : null}
+        <ScrollTrigger
+          onEnter={this.onEnterViewportAbout}
+          onExit={this.onExitViewportAbout}
+        >
+          <Element name="about">
+            <About id="about"></About>
+          </Element>
+        </ScrollTrigger>
 
-        <Element name="about">
-          <About id="about"></About>
-        </Element>
         <ScrollTrigger
           onEnter={this.onEnterViewportSkills}
           onExit={this.onExitViewportSkills}
