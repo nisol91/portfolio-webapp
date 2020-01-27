@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Spinner, Alert } from "reactstrap";
 import "./footer.scss";
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 import { translate } from "react-i18next";
+// import { Spinner, Alert } from "reactstrap";
+// import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 
 class Footer extends Component {
   constructor(props) {
@@ -60,7 +60,7 @@ class Footer extends Component {
 
     return (
       <div>
-        <h1 className="footer"></h1>
+        <h1 className="footer"> </h1>
       </div>
     );
   }

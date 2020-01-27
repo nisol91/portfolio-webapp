@@ -3,16 +3,66 @@
 
 
 //height
-@media (max-height: 800px) {}
+@media (max-height: 800px) {
+
+
+	.main {
+		overflow-y: scroll !important;
+	}
+
+	.mylink {
+		margin-top: 10px !important;
+	}
+
+	.socialIcons {
+		margin-top: 20px !important;
+
+		a {
+			margin-top: 5px !important;
+
+		}
+	}
+}
+
+//=====================
+//=====================
+
 
 //super extra small
-@media (min-width: 300px) {}
+@media (min-width: 300px) {
+
+
+	#s,
+	#t,
+	#c {
+		width: 250px !important;
+		height: 250px !important;
+	}
+}
 
 // Extra Small devices (landscape phones, 576px and up)
-@media (min-width: 450px) {}
+@media (min-width: 450px) {
+
+	#s,
+	#t,
+	#c {
+		width: 250px !important;
+		height: 250px !important;
+	}
+}
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+
+	#s,
+	#t,
+	#c {
+		width: 300px !important;
+		height: 300px !important;
+	}
+
+
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
@@ -22,6 +72,12 @@
 
 
 
+	#s,
+	#t,
+	#c {
+		width: 400px !important;
+		height: 400px !important;
+	}
 }
 
 // Large devices (desktops, 992px and up)
@@ -36,24 +92,119 @@
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1300px) {}
+@media (min-width: 1300px) {
 
-@media (min-width: 1400px) {}
+	#s,
+	#t,
+	#c {
+		width: 500px !important;
+		height: 500px !important;
+	}
+}
+
+@media (min-width: 1400px) {
+
+	#s,
+	#t,
+	#c {
+		width: 700px !important;
+		height: 700px !important;
+	}
+}
 
 
 //==========
 
-//Super extra small
-@media (max-width: 450px) {
-	.contact2 {
-		font-size: 35px !important;
+
+
+// Large devices (large desktops, 1200px and down)
+@media (max-width: 1200px) and (min-width: 768px) {}
+
+// Medium devices (desktops, 992px and down)
+@media (max-width: 992px) {
+	.logportBox {
+		flex-direction: column;
+		margin: 30px;
 	}
 
-	.logosPortfolio {
-		width: 60px !important;
-		margin: 5px !important;
+	.card_projects {
+		width: 100% !important;
+	}
+
+	.close-container {
+		display: none !important;
+	}
+
+	.skills1,
+	.skills2,
+	.skills3 {
+
+		margin-top: 20px !important;
+	}
+
+	.skillssx {
+		width: 100% !important;
+	}
+
+	.boxPortfolio {
+		flex-direction: column;
+	}
+
+	.works {
+		width: 100% !important;
+		margin-top: 0px !important;
+
+	}
+
+	.textPortfolio {
+		width: 100% !important;
+	}
+
+	.port1 {
+		font-size: 50px !important;
+	}
+
+	.port2 {
+		font-size: 30px !important;
+
+	}
+
+
+
+	.boxHome,
+	.boxSkills,
+	.boxAbout {
+		display: block !important;
 	}
 }
+
+// Small devices (tablets, 768px and down)
+@media (max-width: 768px) {
+
+
+
+	.boxHome,
+	.boxSkills {
+		padding: 40px !important;
+	}
+
+	.boxPortfolio {
+		margin: 10px !important;
+		width: 90% !important;
+	}
+
+	.contact {
+		padding: 20px;
+	}
+
+	.contact2 {
+		font-size: 25px !important;
+	}
+
+
+}
+
+
 
 // Extra Small devices (landscape phones, 576px and down)
 @media (max-width: 576px) {
@@ -125,67 +276,12 @@
 
 }
 
-// Small devices (tablets, 768px and down)
-@media (max-width: 768px) {
+//Super extra small
+@media (max-width: 450px) {
 
 
-
-	.boxHome,
-	.boxSkills {
-		padding: 40px !important;
-	}
-
-
-}
-
-// Medium devices (desktops, 992px and down)
-@media (max-width: 992px) {
-	.close-container {
-		display: none !important;
-	}
-
-	.skills1,
-	.skills2,
-	.skills3 {
-
-		margin-top: 20px !important;
-	}
-
-	.skillssx {
-		width: 100% !important;
-	}
-
-	.boxPortfolio {
-		flex-direction: column;
-	}
-
-	.works {
-		width: 100% !important;
-		margin-top: 0px !important;
-
-	}
-
-	.textPortfolio {
-		width: 100% !important;
-	}
-
-	.port1 {
-		font-size: 50px !important;
-	}
-
-	.port2 {
-		font-size: 30px !important;
-
-	}
-
-
-
-	.boxHome,
-	.boxSkills,
-	.boxAbout {
-		display: block !important;
+	.logosPortfolio {
+		width: 60px !important;
+		margin: 5px !important;
 	}
 }
-
-// Large devices (large desktops, 1200px and down)
-@media (max-width: 1200px) and (min-width: 768px) {}

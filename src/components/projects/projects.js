@@ -136,7 +136,12 @@ class Projects extends Component {
               <h1 className="port2">Check it out</h1>
               <h3 className="port3">
                 And visit my
-                <a href="https://github.com/nisol91?tab=repositories">
+                <a
+                  href="https://github.com/nisol91?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="linkHover"
+                >
                   {" "}
                   GitHub{" "}
                 </a>
@@ -145,8 +150,12 @@ class Projects extends Component {
 
               <h3 className="port4">This webapp was made with:</h3>
               <div className="logportBox">
-                <img class="logosPortfolio" src={reactLogo} alt="" />
-                <img class="logosPortfolio" src={firebaseLogo} alt="" />
+                <div className="card_projects">
+                  <img class="logosPortfolio" src={reactLogo} alt="" />
+                </div>
+                <div className="card_projects">
+                  <img class="logosPortfolio" src={firebaseLogo} alt="" />
+                </div>
               </div>
             </div>
           ) : null}

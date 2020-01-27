@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import PortfolioSp from "./components/portfolio_single_page/portfolio_sp";
-import Navbar from "./components/navbar/navbar";
 
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
@@ -24,7 +23,6 @@ class App extends Component {
         <Router>
           <div className="contenitore">
             <div className="main" onClick={this.hideNav}>
-              <Navbar></Navbar>
               <Route exact path="/" component={PortfolioSp} />
             </div>
           </div>

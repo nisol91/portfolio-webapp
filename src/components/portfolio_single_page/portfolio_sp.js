@@ -10,6 +10,7 @@ import Projects from "../projects/projects";
 import Footer from "../footer/footer";
 import About from "../about/about";
 import Skills from "../skills/skills";
+import Navbar from "../navbar/navbar";
 
 import firebase from "firebase";
 
@@ -38,7 +39,7 @@ class PortfolioSp extends Component {
       scrollContacts: false
     };
   }
-  notify = () => toast("Scroll to zoom and drag to move!");
+  notify = () => toast("Hey, check out my projects");
 
   //cosi controllo la durata del caricamento
 
@@ -98,6 +99,8 @@ class PortfolioSp extends Component {
 
     return (
       <div className="boxPortfolioSp">
+        <Navbar></Navbar>
+
         <div className="boxHome">
           <h1 className="home1 text-flicker-in-glow">Hey</h1>
           <h1 className="home2 tracking-in-expand">{t("this_is_downhill")}</h1>
