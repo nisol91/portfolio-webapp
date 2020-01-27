@@ -54,7 +54,7 @@ class Navbar extends Component {
 
     return (
       <div
-        className={`navbar ${this.state.toggleNav && "fixedNav slide-in-top"}`}
+        className={`nav_bar ${this.state.toggleNav && "fixedNav slide-in-top"}`}
       >
         {this.state.navItems.map((item, key) => (
           <Link
