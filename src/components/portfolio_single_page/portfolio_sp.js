@@ -234,6 +234,7 @@ class PortfolioSp extends Component {
         {this.state.scrollProjects ? (
           <div>
             <ScrollTrigger
+              className="scrollTrigger"
               onEnter={this.onEnterViewportProjects}
               onExit={this.onExitViewportProjects}
             ></ScrollTrigger>
@@ -244,6 +245,7 @@ class PortfolioSp extends Component {
         ) : null}
         <div>
           <ScrollTrigger
+            className="scrollTrigger"
             onEnter={this.onEnterViewportAbout}
             onExit={this.onExitViewportAbout}
           ></ScrollTrigger>
@@ -253,6 +255,7 @@ class PortfolioSp extends Component {
         </div>
         <div>
           <ScrollTrigger
+            className="scrollTrigger"
             onEnter={this.onEnterViewportSkills}
             onExit={this.onExitViewportSkills}
           ></ScrollTrigger>

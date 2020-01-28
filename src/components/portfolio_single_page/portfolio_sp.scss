@@ -97,3 +97,11 @@
 .active {
 	text-decoration: line-through !important;
 }
+
+.scrollTrigger {
+	position: absolute;
+	margin-top: 20vh;
+	width: 100px;
+	height: 60vh;
+	// background: red;
+}
