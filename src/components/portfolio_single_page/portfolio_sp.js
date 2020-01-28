@@ -50,6 +50,8 @@ class PortfolioSp extends Component {
       skillsVisible: false,
       projectsVisible: false,
       aboutVisible: false,
+      homeVisible: false,
+      contactsVisible: false,
 
       navItems: [
         { id: 1, name: "Home", ref: "home", offset: -30 },
@@ -62,8 +64,6 @@ class PortfolioSp extends Component {
   }
   notify = () => toast("Hey, check out my projects");
 
-  //cosi controllo la durata del caricamento
-
   componentDidMount() {
     setTimeout(() => {
       this.setState({ cubeVisibility: true, toggleClass: false });
@@ -73,6 +73,8 @@ class PortfolioSp extends Component {
     window.addEventListener("scroll", this.handleScroll, true);
     scrollSpy.update();
   }
+
+  //==================gestione dello scroll
 
   scrollTo(element, offset) {
     scroller.scrollTo(element, {
@@ -121,6 +123,36 @@ class PortfolioSp extends Component {
     });
     console.log(this.state.visible);
   };
+
+  onEnterViewportHome = () => {
+    this.setState({
+      homeVisible: true
+    });
+    console.log(this.state.visible);
+  };
+
+  onExitViewportHome = () => {
+    this.setState({
+      homeVisible: false
+    });
+    console.log(this.state.visible);
+  };
+
+  onEnterViewportContacts = () => {
+    this.setState({
+      contactsVisible: true
+    });
+    console.log(this.state.visible);
+  };
+
+  onExitViewportContacts = () => {
+    this.setState({
+      contactsVisible: false
+    });
+    console.log(this.state.visible);
+  };
+
+  //==============
 
   handleScroll = () => {
     if (window.scrollY > "100") {
@@ -182,6 +214,10 @@ class PortfolioSp extends Component {
                   item.name === "Projects" &&
                   "active"} ${this.state.aboutVisible &&
                   item.name === "About" &&
+                  "active"} ${this.state.homeVisible &&
+                  item.name === "Home" &&
+                  "active"} ${this.state.contactsVisible &&
+                  item.name === "Contact" &&
                   "active"}`}
                 onClick={() => {
                   this.setState({ scrollContacts: true, scrollProjects: true });
@@ -195,6 +231,12 @@ class PortfolioSp extends Component {
             </div>
           ))}
         </div>
+        <ScrollTrigger
+          className="scrollTrigger"
+          onEnter={this.onEnterViewportHome}
+          onExit={this.onExitViewportHome}
+        ></ScrollTrigger>
+        <Element name="home"></Element>
 
         <div className="boxHome">
           <h1 className="home1 text-flicker-in-glow">Hey</h1>
@@ -265,9 +307,16 @@ class PortfolioSp extends Component {
         </div>
 
         {this.state.scrollContacts ? (
-          <Element name="contacts">
-            <Contact id="contact"></Contact>
-          </Element>
+          <div>
+            <ScrollTrigger
+              className="scrollTrigger"
+              onEnter={this.onEnterViewportContacts}
+              onExit={this.onExitViewportContacts}
+            ></ScrollTrigger>
+            <Element name="contacts">
+              <Contact id="contact"></Contact>
+            </Element>
+          </div>
         ) : null}
         <Footer></Footer>
       </div>
