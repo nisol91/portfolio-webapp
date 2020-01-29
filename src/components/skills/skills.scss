@@ -29,5 +29,38 @@
 
 	.skillsdx {
 		width: 50%;
+		margin-left: 5%;
 	}
+}
+
+.card_skills {
+	margin: 10px;
+	width: 150px;
+	height: 80px;
+	background: white;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0px 4px 24px -1px rgb(66, 66, 66);
+
+	}
+}
+
+.logosSkills {
+	width: 80px;
+	margin: 10px;
+	max-height: 70%;
+	max-width: 50%;
+}
+
+.skillCardBox {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
 }

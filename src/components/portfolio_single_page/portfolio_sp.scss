@@ -86,6 +86,8 @@
 }
 
 .navItem {
+	position: relative;
+
 	cursor: pointer;
 
 	&:hover {
@@ -98,10 +100,26 @@
 	text-decoration: line-through !important;
 }
 
+.dot {
+	background: rgb(43, 43, 44);
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	top: 25px;
+	left: 45%;
+	border-radius: 100%;
+
+	display: none;
+}
+
+.dotActive {
+	display: inherit;
+}
+
 .scrollTrigger {
 	position: absolute;
 	margin-top: 25vh;
 	width: 100px;
 	height: 20vh;
-	background: red;
+	// background: red;
 }

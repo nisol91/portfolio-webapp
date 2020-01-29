@@ -228,6 +228,19 @@ class PortfolioSp extends Component {
               >
                 {item.name}
               </scrollLink>
+              <div
+                className={`dot ${this.state.skillsVisible &&
+                  item.name === "Skills" &&
+                  "dotActive"} ${this.state.projectsVisible &&
+                  item.name === "Projects" &&
+                  "dotActive"} ${this.state.aboutVisible &&
+                  item.name === "About" &&
+                  "dotActive"} ${this.state.homeVisible &&
+                  item.name === "Home" &&
+                  "dotActive"} ${this.state.contactsVisible &&
+                  item.name === "Contact" &&
+                  "dotActive"}`}
+              ></div>
             </div>
           ))}
         </div>
