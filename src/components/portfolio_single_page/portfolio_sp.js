@@ -272,13 +272,13 @@ class PortfolioSp extends Component {
               {t("contacts")}
             </div>
           </scrollLink>
-          <div
+          {/* <div
             onClick={this.addProject}
             className={`myBtnContact ${this.state.toggleClass &&
               "swing-in-top-fwd"}`}
           >
             add project
-          </div>
+          </div> */}
         </div>
 
         <div>

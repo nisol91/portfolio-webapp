@@ -33,7 +33,7 @@
 }
 
 .Toastify__toast-container--top-right {
-	top: 0.5em !important;
+	top: 3.5em !important;
 }
 
 .Toastify__toast--default {
@@ -62,6 +62,7 @@
 	cursor: pointer;
 
 	&:hover {
+
 		transition: 1s;
 		transform: translateX(10px);
 		color: $link-color;
