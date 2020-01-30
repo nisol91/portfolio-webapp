@@ -20,6 +20,7 @@ import {
   scroller
 } from "react-scroll";
 import ScrollTrigger from "react-scroll-trigger";
+import HamburgerMenu from "react-hamburger-menu";
 
 import firebase from "firebase";
 
@@ -52,6 +53,7 @@ class PortfolioSp extends Component {
       aboutVisible: false,
       homeVisible: false,
       contactsVisible: false,
+      hideNavbar: false,
 
       navItems: [
         { id: 1, name: "Home", ref: "home", offset: -30 },
@@ -195,6 +197,9 @@ class PortfolioSp extends Component {
         console.error("Error writing document: ", error);
       });
   }
+  showNavbar = () => {
+    this.setState({ hideNavbar: !this.state.hideNavbar });
+  };
 
   render() {
     const { t } = this.props;
@@ -202,9 +207,42 @@ class PortfolioSp extends Component {
     return (
       <div className="boxPortfolioSp">
         <div
-          className={`navbar ${this.state.toggleNav &&
-            "fixedNav slide-in-top"}`}
+          className={`showNavBtn ${!this.state.hideNavbar && ""} `}
+          onClick={this.showNavbar}
         >
+          <HamburgerMenu
+            isOpen={!this.state.hideNavbar}
+            menuClicked={this.showNavbar}
+            width={18}
+            height={15}
+            strokeWidth={1}
+            rotate={0}
+            color="black"
+            borderRadius={0}
+            animationDuration={0.5}
+          />
+        </div>
+        <div
+          className={`navbar ${this.state.toggleNav &&
+            "fixedNav slide-in-top"} ${this.state.hideNavbar &&
+            "hide slide-in-top"}`}
+        >
+          <div
+            className={`showNavBtn ${this.state.hideNavbar && "hide"} `}
+            onClick={this.showNavbar}
+          >
+            {/* <HamburgerMenu
+              isOpen={!this.state.hideNavbar}
+              menuClicked={this.showNavbar}
+              width={18}
+              height={15}
+              strokeWidth={1}
+              rotate={0}
+              color="black"
+              borderRadius={0}
+              animationDuration={0.5}
+            /> */}
+          </div>
           {this.state.navItems.map((item, key) => (
             <div className="navItem" key={item.id}>
               <scrollLink
@@ -272,13 +310,6 @@ class PortfolioSp extends Component {
               {t("contacts")}
             </div>
           </scrollLink>
-          {/* <div
-            onClick={this.addProject}
-            className={`myBtnContact ${this.state.toggleClass &&
-              "swing-in-top-fwd"}`}
-          >
-            add project
-          </div> */}
         </div>
 
         <div>

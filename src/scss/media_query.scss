@@ -1,287 +1,362 @@
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 
-
+//================
 //height
+//================
+
 @media (max-height: 800px) {
+  .main {
+    overflow-y: scroll !important;
+  }
 
+  .mylink {
+    margin-top: 10px !important;
+  }
 
-	.main {
-		overflow-y: scroll !important;
-	}
+  .socialIcons {
+    margin-top: 20px !important;
 
-	.mylink {
-		margin-top: 10px !important;
-	}
-
-	.socialIcons {
-		margin-top: 20px !important;
-
-		a {
-			margin-top: 5px !important;
-
-		}
-	}
+    a {
+      margin-top: 5px !important;
+    }
+  }
 }
 
-//=====================
-//=====================
+//=====================******************
 
-
+//================
 //super extra small
+//================
+
 @media (min-width: 300px) {
-
-
-	#s,
-	#t,
-	#c {
-		width: 250px !important;
-		height: 250px !important;
-	}
+  #s,
+  #t,
+  #c {
+    width: 250px !important;
+    height: 250px !important;
+  }
 }
 
+//================
 // Extra Small devices (landscape phones, 576px and up)
+//================
+
 @media (min-width: 450px) {
-
-	#s,
-	#t,
-	#c {
-		width: 250px !important;
-		height: 250px !important;
-	}
+  #s,
+  #t,
+  #c {
+    width: 250px !important;
+    height: 250px !important;
+  }
 }
 
+//================
 // Small devices (landscape phones, 576px and up)
+//================
+
 @media (min-width: 576px) {
-
-	#s,
-	#t,
-	#c {
-		width: 300px !important;
-		height: 300px !important;
-	}
-
-
+  #s,
+  #t,
+  #c {
+    width: 300px !important;
+    height: 300px !important;
+  }
 }
 
+//================
 // Medium devices (tablets, 768px and up)
+//================
+
 @media (min-width: 768px) {
-	.boxPortfolio {
-		flex-direction: row;
-	}
+  .boxPortfolio {
+    flex-direction: row;
+  }
 
-
-
-	#s,
-	#t,
-	#c {
-		width: 400px !important;
-		height: 400px !important;
-	}
+  #s,
+  #t,
+  #c {
+    width: 400px !important;
+    height: 400px !important;
+  }
 }
 
+//================
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-	.works {
-		width: 60% !important;
-	}
+//================
 
-	.textPortfolio {
-		width: 40% !important;
-	}
+@media (min-width: 992px) {
+  .works {
+    width: 60% !important;
+  }
+
+  .textPortfolio {
+    width: 40% !important;
+  }
 }
 
+//================
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1300px) {
+//================
 
-	#s,
-	#t,
-	#c {
-		width: 500px !important;
-		height: 500px !important;
-	}
+@media (min-width: 1300px) {
+  #s,
+  #t,
+  #c {
+    width: 500px !important;
+    height: 500px !important;
+  }
 }
 
 @media (min-width: 1400px) {
-
-	#s,
-	#t,
-	#c {
-		width: 700px !important;
-		height: 700px !important;
-	}
+  #s,
+  #t,
+  #c {
+    width: 700px !important;
+    height: 700px !important;
+  }
 }
 
+//==========**************************************
 
-//==========
-
-
-
+//================
 // Large devices (large desktops, 1200px and down)
-@media (max-width: 1200px) and (min-width: 768px) {}
+//================
 
+@media (max-width: 1200px) and (min-width: 768px) {
+}
+
+//================
 // Medium devices (desktops, 992px and down)
+//================
+
 @media (max-width: 992px) {
-	.logportBox {
-		flex-direction: column;
-		margin: 30px;
-	}
+  .textPortfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-	.card_projects {
-		width: 100% !important;
-	}
+  .skillsdx {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 100px !important;
+  }
 
-	.close-container {
-		display: none !important;
-	}
+  .myBtnContact {
+    &:hover {
+      color: $nav-background-color !important;
+      background: $link-color !important;
+      transform: translateX(0px) !important;
+      text-decoration: none !important;
+    }
+  }
 
-	.skills1,
-	.skills2,
-	.skills3 {
+  .logportBox {
+    flex-direction: column;
+    margin: 30px;
+    width: 100% !important;
+  }
 
-		margin-top: 20px !important;
-	}
+  .card_projects {
+    width: 100% !important;
+  }
 
-	.skillssx {
-		width: 100% !important;
-	}
+  .close-container {
+    display: none !important;
+  }
 
-	.boxPortfolio {
-		flex-direction: column;
-	}
+  .skills1,
+  .skills2,
+  .skills3 {
+    margin-top: 20px !important;
+  }
 
-	.works {
-		width: 100% !important;
-		margin-top: 0px !important;
+  .skillssx {
+    width: 100% !important;
+  }
 
-	}
+  .boxPortfolio {
+    flex-direction: column;
+  }
 
-	.textPortfolio {
-		width: 100% !important;
-	}
+  .works {
+    width: 100% !important;
+    margin-top: 0px !important;
+  }
 
-	.port1 {
-		font-size: 50px !important;
-	}
+  .textPortfolio {
+    width: 100% !important;
+  }
 
-	.port2 {
-		font-size: 30px !important;
+  .port1 {
+    font-size: 50px !important;
+  }
 
-	}
+  .port2 {
+    font-size: 30px !important;
+  }
 
-
-
-	.boxHome,
-	.boxSkills,
-	.boxAbout {
-		display: block !important;
-	}
+  .boxHome,
+  .boxSkills,
+  .boxAbout {
+    // display: block !important;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
+//================
 // Small devices (tablets, 768px and down)
+//================
+
 @media (max-width: 768px) {
+  .card_skills {
+    width: 100% !important;
+  }
 
+  .navbar {
+    height: 250px !important;
+    flex-direction: column;
+    padding: 20px !important;
+    background: $nav-background-color-nav !important;
+    z-index: 9990 !important;
+  }
 
+  .showNavBtn {
+    display: block !important;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+  }
 
-	.boxHome,
-	.boxSkills {
-		padding: 40px !important;
-	}
+  .hide {
+    display: none !important;
+  }
 
-	.boxPortfolio {
-		margin: 10px !important;
-		width: 90% !important;
-	}
+  .boxHome,
+  .boxSkills {
+    padding: 40px !important;
+  }
 
-	.contact {
-		padding: 20px;
-	}
+  .boxSkills {
+    margin-top: 50px !important;
+  }
 
-	.contact2 {
-		font-size: 25px !important;
-	}
+  .boxPortfolio {
+  }
 
+  .contact {
+    padding: 20px;
+  }
 
+  .contact2 {
+    font-size: 25px !important;
+  }
 }
 
-
-
+//================
 // Extra Small devices (landscape phones, 576px and down)
+//================
+
 @media (max-width: 576px) {
-	.progress {
+  .contact {
+    padding: 30px !important;
+  }
 
-		margin-top: 300px !important;
-	}
+  .contact2 {
+    font-size: 20px !important;
+  }
 
-	.navCont {
-		width: 10px !important;
-	}
+  .progress {
+    margin-top: 300px !important;
+  }
 
-	.cardCont {
-		width: 100px !important;
-		height: 100px !important;
-	}
+  .navCont {
+    width: 10px !important;
+  }
 
-	.show {
-		height: 50px !important;
-		width: 50px !important;
-		top: 25px !important;
-		left: 25px !important;
-	}
+  .cardCont {
+    width: 100px !important;
+    margin: 20px !important;
+    height: 100px !important;
+  }
 
+  .show {
+    height: 50px !important;
+    width: 50px !important;
+    top: 25px !important;
+    left: 25px !important;
+  }
 
-	.myBarsCont {
-		opacity: 1 !important;
+  .myBarsCont {
+    opacity: 1 !important;
 
-		.myBars {
-			width: 40px !important;
-			height: 40px !important;
-		}
-	}
+    .myBars {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
 
-	.mynavbar {
-		transform: translateX(-150px) !important;
-		opacity: .95;
-	}
+  .mynavbar {
+    transform: translateX(-150px) !important;
+    opacity: 0.95;
+  }
 
+  .home1,
+  .skills1,
+  .about1 {
+    font-size: 50px !important;
+  }
 
+  .home2,
+  .skills2,
+  .about2 {
+    font-size: 40px !important;
+  }
 
-	.home1,
-	.skills1,
-	.about1 {
-		font-size: 50px !important;
-	}
+  .home3,
+  .skills3,
+  .about3 {
+    font-size: 25px !important;
+  }
 
-	.home2,
-	.skills2,
-	.about2 {
-		font-size: 40px !important;
+  .Toastify__toast--default {
+    width: 50% !important;
+    height: 20px !important;
+  }
 
-	}
-
-	.home3,
-	.skills3,
-	.about3 {
-		font-size: 25px !important;
-	}
-
-	.Toastify__toast--default {
-		width: 50% !important;
-		height: 20px !important;
-	}
-
-	.Toastify__toast {
-		font-size: 10px !important;
-	}
-
+  .Toastify__toast {
+    font-size: 10px !important;
+  }
 }
 
+//================
 //Super extra small
+//================
+
 @media (max-width: 450px) {
+  .boxPortfolio {
+    padding: 120px 20px !important;
+  }
 
+  .port1 {
+    font-size: 30px !important;
+  }
 
-	.logosPortfolio {
-		width: 60px !important;
-		margin: 5px !important;
-	}
+  .port2,
+  .port3,
+  .port4 {
+    font-size: 17px !important;
+  }
+
+  .logosPortfolio {
+    width: 60px !important;
+    margin: 5px !important;
+  }
+
+  .cardCont {
+    margin: 10px !important;
+  }
 }
