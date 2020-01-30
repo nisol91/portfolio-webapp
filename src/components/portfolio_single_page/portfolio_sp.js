@@ -230,19 +230,7 @@ class PortfolioSp extends Component {
           <div
             className={`showNavBtn ${this.state.hideNavbar && "hide"} `}
             onClick={this.showNavbar}
-          >
-            {/* <HamburgerMenu
-              isOpen={!this.state.hideNavbar}
-              menuClicked={this.showNavbar}
-              width={18}
-              height={15}
-              strokeWidth={1}
-              rotate={0}
-              color="black"
-              borderRadius={0}
-              animationDuration={0.5}
-            /> */}
-          </div>
+          ></div>
           {this.state.navItems.map((item, key) => (
             <div className="navItem" key={item.id}>
               <scrollLink

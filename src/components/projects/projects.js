@@ -7,6 +7,8 @@ import { translate } from "react-i18next";
 import reactLogo from "../../img/react.svg";
 import firebaseLogo from "../../img/firebase_logo.png";
 
+import { db } from "../portfolio_single_page/portfolio_sp";
+
 class Projects extends Component {
   constructor(props) {
     super(props);
@@ -15,12 +17,25 @@ class Projects extends Component {
       test: "",
       project: [],
       doggos: [],
-
+      firebaseProjects: [],
       projectsVisibility: false,
       barDidMount: false,
       contentDidMount: false,
       bar: 0
     };
+  }
+
+  async fetchProjects() {
+    await db
+      .collection("projects")
+      .get()
+      .then(querySnapshot => {
+        const data = querySnapshot.docs.map(doc => doc.data());
+        console.log("=====PROJECTS====");
+        console.log(data);
+        console.log("=====PROJECTS====");
+        this.setState({ firebaseProjects: data });
+      });
   }
   async getDoggos() {
     const response = await fetch(
@@ -100,22 +115,13 @@ class Projects extends Component {
   componentDidMount() {
     this.getProjects();
     this.getDoggos();
+    this.fetchProjects();
     // console.log(this.state.doggos);
 
     this.animation();
     this.progress();
   }
   render() {
-    //==handling css classes==
-    // let className_1 = "boxPortfolio";
-    // if (this.state.slide) {
-    //   className_1 += " ";
-    // }
-    // let className_2 = "";
-    // if (this.state.slide) {
-    //   className_2 += " ";
-    // }
-    //
     const { t } = this.props;
 
     return (
@@ -163,13 +169,13 @@ class Projects extends Component {
             className={`works fade-in ${this.state.projectsVisibility &&
               "visible"}`}
           >
-            {this.state.project.map(object => (
+            {this.state.firebaseProjects.map(project => (
               <div
-                key={object._id}
+                key={project._id}
                 className={`fade-in ${this.state.projectsVisibility &&
                   "visible"}`}
               >
-                <Card datiPerCard={object} />
+                <Card datiPerCard={project} />
               </div>
             ))}
           </div>
