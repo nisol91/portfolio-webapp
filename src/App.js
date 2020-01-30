@@ -25,7 +25,7 @@ class App extends Component {
           <div className="contenitore">
             <div className="main" onClick={this.hideNav}>
               <Route exact path="/" component={PortfolioSp} />
-              {/* <Route exact path="/project/:projID" component={Project} /> */}
+              <Route exact path="/project/:projID" component={Project} />
             </div>
           </div>
         </Router>

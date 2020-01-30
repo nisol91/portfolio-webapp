@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./card.scss";
 import { Link } from "react-router-dom";
 import { Spinner } from "reactstrap";
+import Project from "../project/project";
 
 export default class Card extends Component {
   constructor(props) {
@@ -9,10 +10,17 @@ export default class Card extends Component {
 
     this.state = {
       image: null,
-      imageLoaded: false
+      imageLoaded: false,
+      showProject: false
     };
     this.handleImageLoaded = this.handleImageLoaded.bind(this);
   }
+
+  // showProject() {
+  //   this.setState({
+  //     showProject: !this.state.showProject
+  //   });
+  // }
   handleImageLoaded() {
     setTimeout(() => {
       this.setState({
@@ -28,11 +36,20 @@ export default class Card extends Component {
       <div className="cardCont">
         <div className="imgContainer">
           <Link
-            to={`/projects/${this.props.datiPerCard.projID}`}
+            to={{
+              pathname: `/project/${this.props.datiPerCard.id}`,
+              state: {
+                name: this.props.datiPerCard.name,
+                description: this.props.datiPerCard.description,
+                img: this.props.datiPerCard.img
+              }
+            }}
             className="mylink"
           >
             <div className="show">
-              <h1 className="showText textCardColor">SHOW ME</h1>
+              <h1 className="showText textCardColor" onClick={this.showProject}>
+                SHOW ME
+              </h1>
             </div>
           </Link>
           {!this.state.imageLoaded && (
