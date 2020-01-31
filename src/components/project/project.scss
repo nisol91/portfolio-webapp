@@ -4,15 +4,17 @@ $card-width: 200px;
 $card-height: 200px;
 
 
-
 .projCont {
 	width: 100vw;
 	height: 100vh;
-	background: grey;
+	background: transparent;
 	margin: 5px;
 	overflow: auto;
 	position: relative;
 	display: flex;
+	padding: 50px;
+
+	.titleProj {}
 
 	.imgSpinner {
 		position: absolute;
@@ -58,23 +60,7 @@ $card-height: 200px;
 
 		}
 
-		&:hover {
-			img {
-				transform: scale(1.2);
-				// transform-origin: center;
-				opacity: 1;
-				transition: opacity 1s linear 0s, transform .5s linear .1s;
 
-			}
-
-			.show {
-				transform: scale(1);
-				opacity: 1;
-				transition: transform .3s ease-in,
-					opacity .5s ease-in;
-				;
-			}
-		}
 	}
 }
 
