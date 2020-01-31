@@ -56,7 +56,7 @@ export default class Card extends Component {
             <Spinner color="primary" className="imgSpinner" />
           )}
           <img
-            src={this.props.datiPerCard.img}
+            src={this.props.datiPerCard.img[0]}
             alt=""
             onLoad={this.handleImageLoaded}
           />

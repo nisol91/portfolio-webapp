@@ -1,12 +1,43 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 $card-point-color: rgb(0, 174, 255);
 $card-link-color: #536872;
 $card-width: 200px;
 $card-height: 200px;
 
+.imgGalleryCont {
+  //   width: 90vw;
+}
+.showGallery {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.gotoProj {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  background: $card-point-color;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btnProjText {
+    font-size: 16px;
+    color: $card-link-color;
+  }
+
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+
 .arrowBtn {
   width: 100%;
   height: 100%;
 }
+
 .arrowCont {
   width: 50px;
   height: 50px;
@@ -28,17 +59,20 @@ $card-height: 200px;
     background: lightcyan;
   }
 }
+
 .projBox {
   padding: 20px;
+  min-height: 100vh;
 }
+
 .projContArrow {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .projCont {
   background: transparent;
-  overflow: auto;
   position: relative;
   display: flex;
   justify-content: center;
@@ -46,11 +80,16 @@ $card-height: 200px;
   padding: 50px;
 
   .titleProj {
-    width: 25%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    h1,
+    h3 {
+      text-align: center;
+    }
   }
 
   .imgSpinner {
@@ -64,11 +103,29 @@ $card-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
+    flex-direction: column;
+
+    .immagine {
       opacity: 0.5;
       transition: opacity 1s linear 0s, transform 0.5s linear;
       z-index: 100;
-      max-width: 80%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        filter: blur(1px);
+      }
+    }
+
+    .img1 {
+      max-width: 60%;
+    }
+
+    .img2 {
+      max-width: 60%;
+      margin-left: 20%;
     }
 
     .show {

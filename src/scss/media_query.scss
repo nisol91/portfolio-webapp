@@ -6,21 +6,21 @@
 //================
 
 @media (max-height: 800px) {
-  .main {
-    overflow-y: scroll !important;
-  }
+	.main {
+		overflow-y: scroll !important;
+	}
 
-  .mylink {
-    margin-top: 10px !important;
-  }
+	.mylink {
+		margin-top: 10px !important;
+	}
 
-  .socialIcons {
-    margin-top: 20px !important;
+	.socialIcons {
+		margin-top: 20px !important;
 
-    a {
-      margin-top: 5px !important;
-    }
-  }
+		a {
+			margin-top: 5px !important;
+		}
+	}
 }
 
 //=====================******************
@@ -30,12 +30,13 @@
 //================
 
 @media (min-width: 300px) {
-  #s,
-  #t,
-  #c {
-    width: 250px !important;
-    height: 250px !important;
-  }
+
+	#s,
+	#t,
+	#c {
+		width: 250px !important;
+		height: 250px !important;
+	}
 }
 
 //================
@@ -43,12 +44,13 @@
 //================
 
 @media (min-width: 450px) {
-  #s,
-  #t,
-  #c {
-    width: 250px !important;
-    height: 250px !important;
-  }
+
+	#s,
+	#t,
+	#c {
+		width: 250px !important;
+		height: 250px !important;
+	}
 }
 
 //================
@@ -56,12 +58,13 @@
 //================
 
 @media (min-width: 576px) {
-  #s,
-  #t,
-  #c {
-    width: 300px !important;
-    height: 300px !important;
-  }
+
+	#s,
+	#t,
+	#c {
+		width: 300px !important;
+		height: 300px !important;
+	}
 }
 
 //================
@@ -69,16 +72,16 @@
 //================
 
 @media (min-width: 768px) {
-  .boxPortfolio {
-    flex-direction: row;
-  }
+	.boxPortfolio {
+		flex-direction: row;
+	}
 
-  #s,
-  #t,
-  #c {
-    width: 400px !important;
-    height: 400px !important;
-  }
+	#s,
+	#t,
+	#c {
+		width: 400px !important;
+		height: 400px !important;
+	}
 }
 
 //================
@@ -86,13 +89,13 @@
 //================
 
 @media (min-width: 992px) {
-  .works {
-    width: 60% !important;
-  }
+	.works {
+		width: 60% !important;
+	}
 
-  .textPortfolio {
-    width: 40% !important;
-  }
+	.textPortfolio {
+		width: 40% !important;
+	}
 }
 
 //================
@@ -100,21 +103,23 @@
 //================
 
 @media (min-width: 1300px) {
-  #s,
-  #t,
-  #c {
-    width: 500px !important;
-    height: 500px !important;
-  }
+
+	#s,
+	#t,
+	#c {
+		width: 500px !important;
+		height: 500px !important;
+	}
 }
 
 @media (min-width: 1400px) {
-  #s,
-  #t,
-  #c {
-    width: 700px !important;
-    height: 700px !important;
-  }
+
+	#s,
+	#t,
+	#c {
+		width: 700px !important;
+		height: 700px !important;
+	}
 }
 
 //==========**************************************
@@ -124,9 +129,9 @@
 //================
 
 @media (max-width: 1200px) and (min-width: 768px) {
-  .boxHome {
-    height: 140vh !important;
-  }
+	.boxHome {
+		height: 140vh !important;
+	}
 }
 
 //================
@@ -134,79 +139,79 @@
 //================
 
 @media (max-width: 992px) {
-  .textPortfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+	.textPortfolio {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-  .skillsdx {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-top: 100px !important;
-  }
+	.skillsdx {
+		width: 100% !important;
+		margin-left: 0 !important;
+		margin-top: 100px !important;
+	}
 
-  .myBtnContact {
-    &:hover {
-      color: $nav-background-color !important;
-      background: $link-color !important;
-      transform: translateX(0px) !important;
-      text-decoration: none !important;
-    }
-  }
+	.myBtnContact {
+		&:hover {
+			color: $nav-background-color !important;
+			background: $link-color !important;
+			transform: translateX(0px) !important;
+			text-decoration: none !important;
+		}
+	}
 
-  .logportBox {
-    flex-direction: column;
-    margin: 30px;
-    width: 100% !important;
-  }
+	.logportBox {
+		flex-direction: column;
+		margin: 30px;
+		width: 100% !important;
+	}
 
-  .card_projects {
-    width: 100% !important;
-  }
+	.card_projects {
+		width: 100% !important;
+	}
 
-  .close-container {
-    display: none !important;
-  }
+	.close-container {
+		display: none !important;
+	}
 
-  .skills1,
-  .skills2,
-  .skills3 {
-    margin-top: 20px !important;
-  }
+	.skills1,
+	.skills2,
+	.skills3 {
+		margin-top: 20px !important;
+	}
 
-  .skillssx {
-    width: 100% !important;
-  }
+	.skillssx {
+		width: 100% !important;
+	}
 
-  .boxPortfolio {
-    flex-direction: column;
-  }
+	.boxPortfolio {
+		flex-direction: column;
+	}
 
-  .works {
-    width: 100% !important;
-    margin-top: 0px !important;
-  }
+	.works {
+		width: 100% !important;
+		margin-top: 0px !important;
+	}
 
-  .textPortfolio {
-    width: 100% !important;
-  }
+	.textPortfolio {
+		width: 100% !important;
+	}
 
-  .port1 {
-    font-size: 50px !important;
-  }
+	.port1 {
+		font-size: 50px !important;
+	}
 
-  .port2 {
-    font-size: 30px !important;
-  }
+	.port2 {
+		font-size: 30px !important;
+	}
 
-  .boxHome,
-  .boxSkills,
-  .boxAbout {
-    // display: block !important;
-    flex-direction: column;
-    align-items: center;
-  }
+	.boxHome,
+	.boxSkills,
+	.boxAbout {
+		// display: block !important;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 //================
@@ -214,64 +219,65 @@
 //================
 
 @media (max-width: 768px) {
-  .projCont {
-    width: 100% !important;
-    flex-direction: column !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  .titleProj,
-  .imgContainer {
-    width: 100% !important;
-  }
+	.projCont {
+		width: 100% !important;
+		flex-direction: column !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
 
-  .boxAbout {
-    height: 140vh !important;
-  }
+	.titleProj,
+	.imgContainer {
+		width: 100% !important;
+		margin-top: 30px !important;
+	}
 
-  .card_skills {
-    width: 100% !important;
-  }
+	.boxAbout {
+		height: 140vh !important;
+	}
 
-  .navbar {
-    height: 250px !important;
-    flex-direction: column;
-    padding: 20px !important;
-    background: $nav-background-color-nav !important;
-    z-index: 9990 !important;
-  }
+	.card_skills {
+		width: 100% !important;
+	}
 
-  .showNavBtn {
-    display: block !important;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
-  }
+	.navbar {
+		height: 250px !important;
+		flex-direction: column;
+		padding: 20px !important;
+		background: $nav-background-color-nav !important;
+		z-index: 9990 !important;
+	}
 
-  .hide {
-    display: none !important;
-  }
+	.showNavBtn {
+		display: block !important;
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		z-index: 9999;
+	}
 
-  .boxHome,
-  .boxSkills {
-    padding: 40px !important;
-  }
+	.hide {
+		display: none !important;
+	}
 
-  .boxSkills {
-    margin-top: 50px !important;
-  }
+	.boxHome,
+	.boxSkills {
+		padding: 40px !important;
+	}
 
-  .boxPortfolio {
-  }
+	.boxSkills {
+		margin-top: 50px !important;
+	}
 
-  .contact {
-    padding: 20px;
-  }
+	.boxPortfolio {}
 
-  .contact2 {
-    font-size: 25px !important;
-  }
+	.contact {
+		padding: 20px;
+	}
+
+	.contact2 {
+		font-size: 25px !important;
+	}
 }
 
 //================
@@ -279,75 +285,75 @@
 //================
 
 @media (max-width: 576px) {
-  .contact {
-    padding: 30px !important;
-  }
+	.contact {
+		padding: 30px !important;
+	}
 
-  .contact2 {
-    font-size: 20px !important;
-  }
+	.contact2 {
+		font-size: 20px !important;
+	}
 
-  .progress {
-    margin-top: 300px !important;
-  }
+	.progress {
+		margin-top: 300px !important;
+	}
 
-  .navCont {
-    width: 10px !important;
-  }
+	.navCont {
+		width: 10px !important;
+	}
 
-  .cardCont {
-    width: 100px !important;
-    margin: 20px !important;
-    height: 100px !important;
-  }
+	.cardCont {
+		width: 100px !important;
+		margin: 20px !important;
+		height: 100px !important;
+	}
 
-  .show {
-    height: 50px !important;
-    width: 50px !important;
-    top: 25px !important;
-    left: 25px !important;
-  }
+	.show {
+		height: 50px !important;
+		width: 50px !important;
+		top: 25px !important;
+		left: 25px !important;
+	}
 
-  .myBarsCont {
-    opacity: 1 !important;
+	.myBarsCont {
+		opacity: 1 !important;
 
-    .myBars {
-      width: 40px !important;
-      height: 40px !important;
-    }
-  }
+		.myBars {
+			width: 40px !important;
+			height: 40px !important;
+		}
+	}
 
-  .mynavbar {
-    transform: translateX(-150px) !important;
-    opacity: 0.95;
-  }
+	.mynavbar {
+		transform: translateX(-150px) !important;
+		opacity: 0.95;
+	}
 
-  .home1,
-  .skills1,
-  .about1 {
-    font-size: 50px !important;
-  }
+	.home1,
+	.skills1,
+	.about1 {
+		font-size: 50px !important;
+	}
 
-  .home2,
-  .skills2,
-  .about2 {
-    font-size: 40px !important;
-  }
+	.home2,
+	.skills2,
+	.about2 {
+		font-size: 40px !important;
+	}
 
-  .home3,
-  .skills3,
-  .about3 {
-    font-size: 25px !important;
-  }
+	.home3,
+	.skills3,
+	.about3 {
+		font-size: 25px !important;
+	}
 
-  .Toastify__toast--default {
-    width: 50% !important;
-    height: 20px !important;
-  }
+	.Toastify__toast--default {
+		width: 50% !important;
+		height: 20px !important;
+	}
 
-  .Toastify__toast {
-    font-size: 10px !important;
-  }
+	.Toastify__toast {
+		font-size: 10px !important;
+	}
 }
 
 //================
@@ -355,26 +361,26 @@
 //================
 
 @media (max-width: 450px) {
-  .boxPortfolio {
-    padding: 120px 20px !important;
-  }
+	.boxPortfolio {
+		padding: 120px 20px !important;
+	}
 
-  .port1 {
-    font-size: 30px !important;
-  }
+	.port1 {
+		font-size: 30px !important;
+	}
 
-  .port2,
-  .port3,
-  .port4 {
-    font-size: 17px !important;
-  }
+	.port2,
+	.port3,
+	.port4 {
+		font-size: 17px !important;
+	}
 
-  .logosPortfolio {
-    width: 60px !important;
-    margin: 5px !important;
-  }
+	.logosPortfolio {
+		width: 60px !important;
+		margin: 5px !important;
+	}
 
-  .cardCont {
-    margin: 10px !important;
-  }
+	.cardCont {
+		margin: 10px !important;
+	}
 }

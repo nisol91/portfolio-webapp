@@ -8,8 +8,9 @@ import {
   faArrowRight,
   faArrowLeft,
   faArrowAltCircleLeft,
-  faBars
+  faWindowClose
 } from "@fortawesome/free-solid-svg-icons";
+import ImageGallery from "react-image-gallery";
 
 export default class Project extends Component {
   constructor(props) {
@@ -20,10 +21,14 @@ export default class Project extends Component {
       imageLoaded: false,
       projectId: null,
       project: [],
-      projectLenght: 0
+      projectLenght: 0,
+      images: [],
+      showGallery: false,
+      imagesForGallery: []
     };
     this.handleImageLoaded = this.handleImageLoaded.bind(this);
     this.changeProj = this.changeProj.bind(this);
+    this.showGallery = this.showGallery.bind(this);
   }
 
   async fetchProjects(projID) {
@@ -34,11 +39,42 @@ export default class Project extends Component {
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
         console.log("=====PROJECTS in project====");
-        console.log(data[0].img);
+        console.log(data[0].img[1]);
         console.log("=====PROJECTS====");
-        this.setState({ project: data[0] });
+        this.setState({
+          project: data[0],
+          images: data[0].img
+        });
+        console.log(this.state.images);
+        var arr = [];
+        var len = this.state.images.length;
+        for (var i = 0; i < len; i++) {
+          arr.push({
+            original: this.state.images[i],
+            thumbnail: this.state.images[i]
+          });
+        }
+        this.setState({
+          imagesForGallery: arr
+        });
+
+        console.log(arr);
       });
   }
+  // const immy = [
+  //     {
+  //       original: "https://picsum.photos/id/1018/1000/600/",
+  //       thumbnail: "https://picsum.photos/id/1018/250/150/"
+  //     },
+  //     {
+  //       original: "https://picsum.photos/id/1015/1000/600/",
+  //       thumbnail: "https://picsum.photos/id/1015/250/150/"
+  //     },
+  //     {
+  //       original: "https://picsum.photos/id/1019/1000/600/",
+  //       thumbnail: "https://picsum.photos/id/1019/250/150/"
+  //     }
+  //   ];
   async countProjects() {
     await db
       .collection("projects")
@@ -60,7 +96,9 @@ export default class Project extends Component {
     }, 0);
   }
   changeProj() {
-    console.log(this.state.projectId);
+    this.setState({
+      showGallery: false
+    });
 
     setTimeout(() => {
       this.setProjId();
@@ -74,13 +112,15 @@ export default class Project extends Component {
     this.fetchProjects(projID);
     console.log(projID);
   }
+
+  showGallery() {
+    this.setState({
+      showGallery: !this.state.showGallery
+    });
+  }
   componentDidMount() {
     this.setProjId();
     this.countProjects();
-    console.log("====================================");
-    // console.log(this.props.location.state);
-
-    console.log("====================================");
   }
 
   render() {
@@ -121,16 +161,46 @@ export default class Project extends Component {
             <div className="titleProj">
               <h1>{this.state.project.name}</h1>
               <h3>{this.state.project.description}</h3>
+              {this.state.project.type === "web" ? (
+                <a href={this.state.project.url} className="gotoProj">
+                  <div className="btnProjText">Go to the website</div>
+                </a>
+              ) : null}
             </div>
             <div className="imgContainer">
               {!this.state.imageLoaded && (
                 <Spinner color="primary" className="imgSpinner" />
               )}
-              <img
-                src={this.state.project.img}
-                alt=""
-                onLoad={this.handleImageLoaded}
-              />
+              <div className="immagine" onClick={this.showGallery}>
+                <img
+                  src={this.state.images[0]}
+                  alt=""
+                  onLoad={this.handleImageLoaded}
+                  className="img1"
+                />
+              </div>
+              {this.state.images[1] != null ? (
+                <div className="immagine" onClick={this.showGallery}>
+                  <img
+                    src={this.state.images[1]}
+                    alt=""
+                    onLoad={this.handleImageLoaded}
+                    className="img2"
+                  />
+                </div>
+              ) : null}
+              {this.state.showGallery ? (
+                <div className="imgGalleryCont">
+                  <div className="showGallery" onClick={this.showGallery}>
+                    <FontAwesomeIcon
+                      icon={faWindowClose}
+                      className={`arrow_right ${this.state.navSlide &&
+                        "arrow_right_show"}`}
+                    />
+                  </div>
+                  <ImageGallery items={this.state.imagesForGallery} />
+                </div>
+              ) : null}
             </div>
           </div>
           <div className="arrowCont">
