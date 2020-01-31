@@ -3,6 +3,13 @@ import "./project.scss";
 import { Link } from "react-router-dom";
 import { Spinner } from "reactstrap";
 import { db } from "../portfolio_single_page/portfolio_sp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowRight,
+  faArrowLeft,
+  faArrowAltCircleLeft,
+  faBars
+} from "@fortawesome/free-solid-svg-icons";
 
 export default class Project extends Component {
   constructor(props) {
@@ -78,45 +85,72 @@ export default class Project extends Component {
 
   render() {
     return (
-      <div className="projCont">
+      <div className="projBox">
         <Link
           to={{
             pathname: `/`
           }}
           className="mylink backBtn"
-        ></Link>
-        {this.state.projectId != 1 ? (
-          <Link
-            to={{
-              pathname: `/project/${parseInt(this.state.projectId) - 1}`
-            }}
-            className="mylink arrowBtn"
-            onClick={this.changeProj}
-          ></Link>
-        ) : null}
-        <div className="titleProj">
-          <h1>{this.state.project.name}</h1>
-          <h3>{this.state.project.description}</h3>
-        </div>
-        <div className="imgContainer">
-          {!this.state.imageLoaded && (
-            <Spinner color="primary" className="imgSpinner" />
-          )}
-          <img
-            src={this.state.project.img}
-            alt=""
-            onLoad={this.handleImageLoaded}
+        >
+          <FontAwesomeIcon
+            icon={faArrowAltCircleLeft}
+            className={`arrow_right ${this.state.navSlide &&
+              "arrow_right_show"}`}
           />
+        </Link>
+        <div className="projContArrow">
+          <div className="arrowCont">
+            {this.state.projectId != 1 ? (
+              <Link
+                to={{
+                  pathname: `/project/${parseInt(this.state.projectId) - 1}`
+                }}
+                className="mylink arrowBtn"
+                onClick={this.changeProj}
+              >
+                <FontAwesomeIcon
+                  icon={faArrowLeft}
+                  className={`arrow_right ${this.state.navSlide &&
+                    "arrow_right_show"}`}
+                />
+              </Link>
+            ) : null}
+          </div>
+
+          <div className="projCont">
+            <div className="titleProj">
+              <h1>{this.state.project.name}</h1>
+              <h3>{this.state.project.description}</h3>
+            </div>
+            <div className="imgContainer">
+              {!this.state.imageLoaded && (
+                <Spinner color="primary" className="imgSpinner" />
+              )}
+              <img
+                src={this.state.project.img}
+                alt=""
+                onLoad={this.handleImageLoaded}
+              />
+            </div>
+          </div>
+          <div className="arrowCont">
+            {this.state.projectId <= this.state.projectLenght - 1 ? (
+              <Link
+                to={{
+                  pathname: `/project/${parseInt(this.state.projectId) + 1}`
+                }}
+                className="mylink arrowBtn"
+                onClick={this.changeProj}
+              >
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className={`arrow_right ${this.state.navSlide &&
+                    "arrow_right_show"}`}
+                />
+              </Link>
+            ) : null}
+          </div>
         </div>
-        {this.state.projectId <= this.state.projectLenght - 1 ? (
-          <Link
-            to={{
-              pathname: `/project/${parseInt(this.state.projectId) + 1}`
-            }}
-            className="mylink arrowBtn"
-            onClick={this.changeProj}
-          ></Link>
-        ) : null}
       </div>
     );
   }
