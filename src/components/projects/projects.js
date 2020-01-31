@@ -28,6 +28,7 @@ class Projects extends Component {
   async fetchProjects() {
     await db
       .collection("projects")
+      .orderBy("id")
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
