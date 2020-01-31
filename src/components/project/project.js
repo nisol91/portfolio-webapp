@@ -11,10 +11,12 @@ export default class Project extends Component {
     this.state = {
       image: null,
       imageLoaded: false,
-      projectId: this.props.match.params,
-      project: []
+      projectId: null,
+      project: [],
+      projectLenght: 0
     };
     this.handleImageLoaded = this.handleImageLoaded.bind(this);
+    this.changeProj = this.changeProj.bind(this);
   }
 
   async fetchProjects(projID) {
@@ -30,6 +32,18 @@ export default class Project extends Component {
         this.setState({ project: data[0] });
       });
   }
+  async countProjects() {
+    await db
+      .collection("projects")
+      .where("id", ">", "0")
+      .get()
+      .then(querySnapshot => {
+        const data = querySnapshot.docs.map(doc => doc.data());
+        console.log("=====QUANTI PROGETTI?====");
+        console.log(data.length);
+        this.setState({ projectLenght: data.length });
+      });
+  }
   handleImageLoaded() {
     setTimeout(() => {
       this.setState({
@@ -38,12 +52,26 @@ export default class Project extends Component {
       console.log(this.state.imageLoaded);
     }, 0);
   }
-  componentDidMount() {
+  changeProj() {
+    console.log(this.state.projectId);
+
+    setTimeout(() => {
+      this.setProjId();
+    }, 200);
+  }
+  setProjId() {
     const { projID } = this.props.match.params;
+    this.setState({
+      projectId: projID
+    });
     this.fetchProjects(projID);
+    console.log(projID);
+  }
+  componentDidMount() {
+    this.setProjId();
+    this.countProjects();
     console.log("====================================");
     // console.log(this.props.location.state);
-    console.log(projID);
 
     console.log("====================================");
   }
@@ -51,6 +79,21 @@ export default class Project extends Component {
   render() {
     return (
       <div className="projCont">
+        <Link
+          to={{
+            pathname: `/`
+          }}
+          className="mylink backBtn"
+        ></Link>
+        {this.state.projectId != 1 ? (
+          <Link
+            to={{
+              pathname: `/project/${parseInt(this.state.projectId) - 1}`
+            }}
+            className="mylink arrowBtn"
+            onClick={this.changeProj}
+          ></Link>
+        ) : null}
         <div className="titleProj">
           <h1>{this.state.project.name}</h1>
           <h3>{this.state.project.description}</h3>
@@ -65,6 +108,15 @@ export default class Project extends Component {
             onLoad={this.handleImageLoaded}
           />
         </div>
+        {this.state.projectId <= this.state.projectLenght - 1 ? (
+          <Link
+            to={{
+              pathname: `/project/${parseInt(this.state.projectId) + 1}`
+            }}
+            className="mylink arrowBtn"
+            onClick={this.changeProj}
+          ></Link>
+        ) : null}
       </div>
     );
   }

@@ -116,8 +116,6 @@ class Projects extends Component {
     this.getProjects();
     this.getDoggos();
     this.fetchProjects();
-    // console.log(this.state.doggos);
-
     this.animation();
     this.progress();
   }
@@ -169,14 +167,16 @@ class Projects extends Component {
             className={`works fade-in ${this.state.projectsVisibility &&
               "visible"}`}
           >
-            {this.state.firebaseProjects.map(project => (
-              <div
-                key={project._id}
-                className={`fade-in ${this.state.projectsVisibility &&
-                  "visible"}`}
-              >
-                <Card datiPerCard={project} />
-              </div>
+            {this.state.firebaseProjects.map((project, index) => (
+              <React.Fragment key={index}>
+                <div
+                  key={index}
+                  className={`fade-in ${this.state.projectsVisibility &&
+                    "visible"}`}
+                >
+                  <Card key={index} datiPerCard={project} />
+                </div>
+              </React.Fragment>
             ))}
           </div>
         </div>

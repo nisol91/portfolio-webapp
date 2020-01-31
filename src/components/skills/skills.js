@@ -3,6 +3,12 @@ import Cube from "../cube";
 import { translate } from "react-i18next";
 import reactLogo from "../../img/react.svg";
 import firebaseLogo from "../../img/firebase_logo.png";
+import htmlLogo from "../../img/html.png";
+import cssLogo from "../../img/css.png";
+import dartLogo from "../../img/dart.png";
+import flutterLogo from "../../img/flutter.png";
+import jsLogo from "../../img/js.png";
+
 import "./skills.scss";
 
 // import axios from "axios";
@@ -17,9 +23,11 @@ class Skills extends Component {
       stackItems: [
         { id: 1, name: "react", src: reactLogo },
         { id: 2, name: "firebase", src: firebaseLogo },
-        { id: 5, name: "javascript", src: firebaseLogo },
-        { id: 6, name: "dart", src: firebaseLogo },
-        { id: 7, name: "flutter", src: firebaseLogo }
+        { id: 5, name: "js", src: jsLogo },
+        { id: 6, name: "dart", src: dartLogo },
+        { id: 6, name: "html", src: htmlLogo },
+        { id: 6, name: "css", src: cssLogo },
+        { id: 7, name: "flutter", src: flutterLogo }
       ]
     };
   }
