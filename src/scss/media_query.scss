@@ -212,6 +212,10 @@
 		flex-direction: column;
 		align-items: center;
 	}
+
+	.boxAbout {
+		height: 140vh !important;
+	}
 }
 
 //================
@@ -232,9 +236,7 @@
 		margin-top: 30px !important;
 	}
 
-	.boxAbout {
-		height: 140vh !important;
-	}
+
 
 	.card_skills {
 		width: 100% !important;
@@ -302,9 +304,12 @@
 	}
 
 	.cardCont {
-		width: 100px !important;
-		margin: 20px !important;
+		width: 70vw !important;
 		height: 100px !important;
+
+		margin: 0 !important;
+		margin-bottom: 15px !important;
+
 	}
 
 	.show {
@@ -380,7 +385,5 @@
 		margin: 5px !important;
 	}
 
-	.cardCont {
-		margin: 10px !important;
-	}
+	.cardCont {}
 }
