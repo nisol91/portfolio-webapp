@@ -61,20 +61,7 @@ export default class Project extends Component {
         console.log(arr);
       });
   }
-  // const immy = [
-  //     {
-  //       original: "https://picsum.photos/id/1018/1000/600/",
-  //       thumbnail: "https://picsum.photos/id/1018/250/150/"
-  //     },
-  //     {
-  //       original: "https://picsum.photos/id/1015/1000/600/",
-  //       thumbnail: "https://picsum.photos/id/1015/250/150/"
-  //     },
-  //     {
-  //       original: "https://picsum.photos/id/1019/1000/600/",
-  //       thumbnail: "https://picsum.photos/id/1019/250/150/"
-  //     }
-  //   ];
+
   async countProjects() {
     await db
       .collection("projects")
@@ -163,7 +150,9 @@ export default class Project extends Component {
               <h3>{this.state.project.description}</h3>
               {this.state.project.type === "web" ? (
                 <a href={this.state.project.url} className="gotoProj">
-                  <div className="btnProjText">Go to the website</div>
+                  <div className="btnProjText lineThrough">
+                    Go to the website
+                  </div>
                 </a>
               ) : null}
             </div>
