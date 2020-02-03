@@ -57,11 +57,11 @@ class PortfolioSp extends Component {
       hideNavbar: false,
 
       navItems: [
-        { id: 1, name: "Home", ref: "home", offset: -30 },
-        { id: 2, name: "Projects", ref: "projects", offset: -180 },
-        { id: 3, name: "About", ref: "about", offset: -30 },
-        { id: 4, name: "Skills", ref: "skills", offset: -120 },
-        { id: 5, name: "Contact", ref: "contacts", offset: -30 }
+        { id: 1, name: "Home", ref: "home", offset: -50 },
+        { id: 2, name: "Projects", ref: "projects", offset: -50 },
+        { id: 3, name: "About", ref: "about", offset: -50 },
+        { id: 4, name: "Skills", ref: "skills", offset: -50 },
+        { id: 5, name: "Contact", ref: "contacts", offset: -50 }
       ]
     };
   }
