@@ -34,6 +34,8 @@ export default class Card extends Component {
   render() {
     return (
       <div className="cardCont">
+        <div className="shape"></div>
+
         <div className="imgContainer">
           <Link
             to={{
@@ -46,16 +48,15 @@ export default class Card extends Component {
             }}
             className="mylink"
           >
-            <div className="show">
-              <h1 className="showText textCardColor" onClick={this.showProject}>
-                SHOW ME
-              </h1>
+            <div className="show" onClick={this.showProject}>
+              <h1 className="showText textCardColor">SHOW ME</h1>
             </div>
           </Link>
           {!this.state.imageLoaded && (
             <Spinner color="primary" className="imgSpinner" />
           )}
           <img
+            className="projCardImg"
             src={this.props.datiPerCard.img[0]}
             alt=""
             onLoad={this.handleImageLoaded}

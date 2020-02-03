@@ -38,6 +38,13 @@ $card-height: 200px;
 .arrowBtn {
 	width: 100%;
 	height: 100%;
+	font-size: 30px;
+	transition: .5s;
+
+	&:hover {
+		font-size: 40px;
+		transition: .5s;
+	}
 }
 
 .arrowCont {
@@ -123,11 +130,14 @@ $card-height: 200px;
 
 		.img1 {
 			max-width: 60%;
+			border-radius: 10px;
 		}
 
 		.img2 {
 			max-width: 60%;
 			margin-left: 20%;
+			border-radius: 10px;
+
 		}
 
 		.show {
