@@ -172,13 +172,7 @@ class Projects extends Component {
           >
             {this.state.firebaseProjects.map((project, index) => (
               <React.Fragment key={index}>
-                <div
-                  key={index}
-                  className={`fade-in ${this.state.projectsVisibility &&
-                    "visible"}`}
-                >
-                  <Card key={index} datiPerCard={project} />
-                </div>
+                <Card key={index} datiPerCard={project} />
               </React.Fragment>
             ))}
           </div>
