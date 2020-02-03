@@ -1,6 +1,11 @@
 @import "./src/scss/variables";
 
 .boxSkills {
+	background: $link-hover-color;
+	clip-path: polygon(0 0,
+			100% 0,
+			100% 100%,
+			0 calc(100% - 10vw));
 	padding: 70px 110px;
 	display: flex;
 	height: 100vh;
