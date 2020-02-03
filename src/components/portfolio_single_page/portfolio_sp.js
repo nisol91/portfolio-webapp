@@ -1,20 +1,16 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { translate } from "react-i18next";
-import scrollToComponent from "react-scroll-to-component";
 import "./portfolio_sp.scss";
 import Contact from "../contact/contact";
 import Projects from "../projects/projects";
 import Footer from "../footer/footer";
 import About from "../about/about";
 import Skills from "../skills/skills";
-import * as Scroll from "react-scroll";
 import {
-  Link as scrollLink,
+  Link as ScrollLink,
   Element,
-  Events,
   animateScroll as scroll,
   scrollSpy,
   scroller
@@ -48,6 +44,11 @@ class PortfolioSp extends Component {
       scrollProjects: false,
       scrollContacts: false,
       toggleNav: false,
+      skillsNavVisible: false,
+      projectsNavVisible: false,
+      aboutNavVisible: false,
+      homeNavVisible: false,
+      contactsNavVisible: false,
       skillsVisible: false,
       projectsVisible: false,
       aboutVisible: false,
@@ -57,14 +58,13 @@ class PortfolioSp extends Component {
 
       navItems: [
         { id: 1, name: "Home", ref: "home", offset: -30 },
-        { id: 2, name: "Projects", ref: "projects", offset: -70 },
+        { id: 2, name: "Projects", ref: "projects", offset: -180 },
         { id: 3, name: "About", ref: "about", offset: -30 },
-        { id: 4, name: "Skills", ref: "skills", offset: -70 },
+        { id: 4, name: "Skills", ref: "skills", offset: -120 },
         { id: 5, name: "Contact", ref: "contacts", offset: -30 }
       ]
     };
   }
-  notify = () => toast("Hey, check out my projects");
 
   componentDidMount() {
     setTimeout(() => {
@@ -75,6 +75,9 @@ class PortfolioSp extends Component {
     window.addEventListener("scroll", this.handleScroll, true);
     scrollSpy.update();
   }
+
+  //toast component
+  notify = () => toast("Hey, check out my projects");
 
   //==================gestione dello scroll
 
@@ -88,73 +91,76 @@ class PortfolioSp extends Component {
   }
   onEnterViewportAbout = () => {
     this.setState({
-      aboutVisible: true
+      aboutVisible: true,
+      aboutNavVisible: true
     });
     console.log(this.state.visible);
   };
 
   onExitViewportAbout = () => {
     this.setState({
-      aboutVisible: false
+      aboutNavVisible: false
     });
     console.log(this.state.visible);
   };
   onEnterViewportSkills = () => {
     this.setState({
-      skillsVisible: true
+      skillsVisible: true,
+      skillsNavVisible: true
     });
     console.log(this.state.visible);
   };
 
   onExitViewportSkills = () => {
     this.setState({
-      skillsVisible: false
+      skillsNavVisible: false
     });
     console.log(this.state.visible);
   };
   onEnterViewportProjects = () => {
     this.setState({
-      projectsVisible: true
+      projectsVisible: true,
+      projectsNavVisible: true
     });
     console.log(this.state.visible);
   };
 
   onExitViewportProjects = () => {
     this.setState({
-      projectsVisible: false
+      projectsNavVisible: false
     });
     console.log(this.state.visible);
   };
 
   onEnterViewportHome = () => {
     this.setState({
-      homeVisible: true
+      homeVisible: true,
+      homeNavVisible: true
     });
     console.log(this.state.visible);
   };
 
   onExitViewportHome = () => {
     this.setState({
-      homeVisible: false
+      homeNavVisible: false
     });
     console.log(this.state.visible);
   };
 
   onEnterViewportContacts = () => {
     this.setState({
-      contactsVisible: true
+      contactsVisible: true,
+      contactsNavVisible: true
     });
     console.log(this.state.visible);
   };
 
   onExitViewportContacts = () => {
     this.setState({
-      contactsVisible: false
+      contactsNavVisible: false
     });
     console.log(this.state.visible);
   };
-
-  //==============
 
   handleScroll = () => {
     if (window.scrollY > "100") {
@@ -171,6 +177,10 @@ class PortfolioSp extends Component {
     }
     // console.log(window.scrollY);
   };
+
+  //==============
+
+  //========chiamata per i progetti
   async fetchProjects() {
     await db
       .collection("projects")
@@ -201,7 +211,10 @@ class PortfolioSp extends Component {
     this.setState({ hideNavbar: !this.state.hideNavbar });
   };
 
+  //RENDER DEL COMPONENTE=======
+
   render() {
+    //per le intl
     const { t } = this.props;
 
     return (
@@ -233,16 +246,17 @@ class PortfolioSp extends Component {
           ></div>
           {this.state.navItems.map((item, key) => (
             <div className="navItem" key={item.id}>
-              <scrollLink
-                className={`mylink ${this.state.skillsVisible &&
+              <ScrollLink
+                to={""}
+                className={`mylink_portfolio ${this.state.skillsNavVisible &&
                   item.name === "Skills" &&
-                  "active"} ${this.state.projectsVisible &&
+                  "active"} ${this.state.projectsNavVisible &&
                   item.name === "Projects" &&
-                  "active"} ${this.state.aboutVisible &&
+                  "active"} ${this.state.aboutNavVisible &&
                   item.name === "About" &&
-                  "active"} ${this.state.homeVisible &&
+                  "active"} ${this.state.homeNavVisible &&
                   item.name === "Home" &&
-                  "active"} ${this.state.contactsVisible &&
+                  "active"} ${this.state.contactsNavVisible &&
                   item.name === "Contact" &&
                   "active"}`}
                 onClick={() => {
@@ -253,17 +267,17 @@ class PortfolioSp extends Component {
                 }}
               >
                 {item.name}
-              </scrollLink>
+              </ScrollLink>
               <div
-                className={`dot ${this.state.skillsVisible &&
+                className={`dot ${this.state.skillsNavVisible &&
                   item.name === "Skills" &&
-                  "dotActive"} ${this.state.projectsVisible &&
+                  "dotActive"} ${this.state.projectsNavVisible &&
                   item.name === "Projects" &&
-                  "dotActive"} ${this.state.aboutVisible &&
+                  "dotActive"} ${this.state.aboutNavVisible &&
                   item.name === "About" &&
-                  "dotActive"} ${this.state.homeVisible &&
+                  "dotActive"} ${this.state.homeNavVisible &&
                   item.name === "Home" &&
-                  "dotActive"} ${this.state.contactsVisible &&
+                  "dotActive"} ${this.state.contactsNavVisible &&
                   item.name === "Contact" &&
                   "dotActive"}`}
               ></div>
@@ -281,8 +295,9 @@ class PortfolioSp extends Component {
           <h1 className="home1 text-flicker-in-glow">Hey</h1>
           <h1 className="home2 tracking-in-expand">{t("this_is_downhill")}</h1>
           <h1 className="home3 swing-in-top-fwd">{t("what_we_love")}</h1>
-          <scrollLink
-            className="mylink"
+          <ScrollLink
+            to={""}
+            className="mylink_portfolio"
             onClick={() => {
               this.setState({ scrollContacts: true, scrollProjects: true });
 
@@ -297,7 +312,7 @@ class PortfolioSp extends Component {
             >
               {t("contacts")}
             </div>
-          </scrollLink>
+          </ScrollLink>
         </div>
 
         <div>
@@ -323,8 +338,8 @@ class PortfolioSp extends Component {
             onEnter={this.onEnterViewportAbout}
             onExit={this.onExitViewportAbout}
           ></ScrollTrigger>
-          <Element name="about">
-            <About id="about"></About>
+          <Element name="about" className="aboutPlaceholder">
+            {this.state.aboutVisible ? <About id="about"></About> : null}
           </Element>
         </div>
         <div>
@@ -345,8 +360,10 @@ class PortfolioSp extends Component {
               onEnter={this.onEnterViewportContacts}
               onExit={this.onExitViewportContacts}
             ></ScrollTrigger>
-            <Element name="contacts">
-              <Contact id="contact"></Contact>
+            <Element name="contacts" className="contactsPlaceholder">
+              {this.state.contactsVisible ? (
+                <Contact id="contact"></Contact>
+              ) : null}
             </Element>
           </div>
         ) : null}

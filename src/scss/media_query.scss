@@ -128,17 +128,25 @@
 // Large devices (large desktops, 1200px and down)
 //================
 
-@media (max-width: 1200px) and (min-width: 768px) {
-	.boxHome {
-		height: 140vh !important;
-	}
-}
+@media (max-width: 1200px) and (min-width: 768px) {}
 
 //================
 // Medium devices (desktops, 992px and down)
 //================
 
 @media (max-width: 992px) {
+
+
+
+	.boxSkills {
+		height: auto !important;
+	}
+
+	.contact,
+	.contactsPlaceholder {
+		height: 40vh !important;
+	}
+
 	.textPortfolio {
 		display: flex;
 		flex-direction: column;
@@ -213,8 +221,10 @@
 		align-items: center;
 	}
 
-	.boxAbout {
-		height: 140vh !important;
+
+
+	.boxSkills {
+		margin-top: 100px !important;
 	}
 }
 
@@ -267,11 +277,8 @@
 		padding: 40px !important;
 	}
 
-	.boxSkills {
-		margin-top: 50px !important;
-	}
 
-	.boxPortfolio {}
+
 
 	.contact {
 		padding: 20px;
@@ -366,12 +373,19 @@
 //================
 
 @media (max-width: 450px) {
+
+	.contact,
+	.contactsPlaceholder {
+		height: 40vh !important;
+	}
+
 	.boxPortfolio {
 		padding: 120px 20px !important;
+		padding-bottom: 0 !important;
 	}
 
 	.port1 {
-		font-size: 30px !important;
+		font-size: 40px !important;
 	}
 
 	.port2,

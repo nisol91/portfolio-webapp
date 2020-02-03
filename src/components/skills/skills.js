@@ -57,9 +57,11 @@ class Skills extends Component {
           <h1 className="skills2 tracking-in-expand">the stack:</h1>
           <div className="skillCardBox">
             {this.state.stackItems.map((item, key) => (
-              <div className="card_skills" key={item.id}>
-                <img class="logosSkills" src={item.src} alt="" />
-              </div>
+              <React.Fragment key={key}>
+                <div className="card_skills" key={item.id}>
+                  <img className="logosSkills" src={item.src} alt="" />
+                </div>
+              </React.Fragment>
             ))}
           </div>
         </div>

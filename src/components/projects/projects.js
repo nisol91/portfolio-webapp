@@ -125,9 +125,11 @@ class Projects extends Component {
 
     return (
       <div className={`fade-in ${this.state.barDidMount && "visible"}`}>
-        {this.state.projectsVisibility === false && (
-          <ProgressBar now={this.state.bar} />
-        )}
+        <div className="progressBar">
+          {this.state.projectsVisibility === false && (
+            <ProgressBar now={this.state.bar} />
+          )}
+        </div>
         <div
           className={`boxPortfolio fade-in ${this.state.barDidMount &&
             "visible"}`}
@@ -145,7 +147,7 @@ class Projects extends Component {
                   href="https://github.com/nisol91?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="linkHover"
+                  className="linkHover"
                 >
                   {" "}
                   GitHub{" "}
@@ -156,10 +158,10 @@ class Projects extends Component {
               <h3 className="port4">This webapp was made with:</h3>
               <div className="logportBox">
                 <div className="card_projects">
-                  <img class="logosPortfolio" src={reactLogo} alt="" />
+                  <img className="logosPortfolio" src={reactLogo} alt="" />
                 </div>
                 <div className="card_projects">
-                  <img class="logosPortfolio" src={firebaseLogo} alt="" />
+                  <img className="logosPortfolio" src={firebaseLogo} alt="" />
                 </div>
               </div>
             </div>

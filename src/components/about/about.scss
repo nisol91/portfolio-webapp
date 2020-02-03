@@ -2,12 +2,15 @@
 
 .boxAbout {
 	display: flex;
+	align-items: center;
 	height: 100vh;
+	margin-top: 100px;
 
 	.aboutcontainer {
+		height: 100vh;
 		padding: 30px;
-		margin-left: 7%;
-		margin-top: 100px;
+		margin-left: 6%;
+		margin-top: 10px;
 		margin-right: 7%;
 
 		.about1 {
@@ -27,4 +30,9 @@
 			margin-top: 50px;
 		}
 	}
+}
+
+.triangle {
+	width: 100%;
+	height: auto;
 }

@@ -1,10 +1,19 @@
 @import "./src/scss/variables";
 
 //portfolio==========================
+.progressBar {
+	height: 2vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// background: red;
+}
+
 .boxPortfolio {
 	width: 100%;
-	height: auto;
-	padding: 120px 50px;
+	height: 100vh;
+	padding: 120px 110px;
+	padding-bottom: 0;
 	display: flex;
 	justify-content: center;
 
