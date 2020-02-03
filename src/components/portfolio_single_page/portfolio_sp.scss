@@ -96,11 +96,7 @@
 	display: none;
 }
 
-.fixedNav {
-	position: fixed !important;
-	top: 0;
-	transition: 1s;
-}
+
 
 .navItem {
 	position: relative;
@@ -135,10 +131,11 @@
 
 .scrollTrigger {
 	position: absolute;
-	margin-top: 1%;
+	margin-top: 20%;
 	width: 100px;
-	height: 30vh;
+	height: 25vh;
 	// background: red;
+	z-index: 9999;
 }
 
 .aboutPlaceholder {

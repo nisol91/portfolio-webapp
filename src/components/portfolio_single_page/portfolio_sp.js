@@ -54,14 +54,14 @@ class PortfolioSp extends Component {
       aboutVisible: false,
       homeVisible: false,
       contactsVisible: false,
-      hideNavbar: false,
+      hideNavbar: true,
 
       navItems: [
-        { id: 1, name: "Home", ref: "home", offset: -50 },
-        { id: 2, name: "Projects", ref: "projects", offset: -50 },
-        { id: 3, name: "About", ref: "about", offset: -50 },
-        { id: 4, name: "Skills", ref: "skills", offset: -50 },
-        { id: 5, name: "Contact", ref: "contacts", offset: -50 }
+        { id: 1, name: "Home", ref: "home", offset: -80 },
+        { id: 2, name: "Projects", ref: "projects", offset: -80 },
+        { id: 3, name: "About", ref: "about", offset: -80 },
+        { id: 4, name: "Skills", ref: "skills", offset: -80 },
+        { id: 5, name: "Contact", ref: "contacts", offset: -80 }
       ]
     };
   }
@@ -236,7 +236,7 @@ class PortfolioSp extends Component {
           />
         </div>
         <div
-          className={`navbar ${this.state.toggleNav &&
+          className={`navbar fixedMobileNav ${this.state.toggleNav &&
             "fixedNav slide-in-top"} ${this.state.hideNavbar &&
             "hide slide-in-top"}`}
         >

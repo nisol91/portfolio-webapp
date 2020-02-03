@@ -82,6 +82,12 @@
 		width: 400px !important;
 		height: 400px !important;
 	}
+
+	.fixedNav {
+		position: fixed !important;
+		top: 0;
+		transition: 1s;
+	}
 }
 
 //================
@@ -261,6 +267,13 @@
 //================
 
 @media (max-width: 768px) {
+
+	.fixedMobileNav {
+		position: fixed !important;
+		top: 0;
+		transition: 1s;
+	}
+
 	.projCont {
 		width: 100% !important;
 		flex-direction: column !important;
