@@ -141,6 +141,9 @@
 //================
 
 @media (max-width: 992px) {
+	.arrowText {
+		display: none;
+	}
 
 	.cardCont {
 		width: 70vw !important;
@@ -267,6 +270,11 @@
 //================
 
 @media (max-width: 768px) {
+
+	.img1,
+	.img2 {
+		max-width: 90%;
+	}
 
 	.fixedMobileNav {
 		position: fixed !important;

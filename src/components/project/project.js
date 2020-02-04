@@ -140,6 +140,7 @@ export default class Project extends Component {
                   className={`arrow_right ${this.state.navSlide &&
                     "arrow_right_show"}`}
                 />
+                <h3 className="arrowText">Previous Project</h3>
               </Link>
             ) : null}
           </div>
@@ -206,6 +207,7 @@ export default class Project extends Component {
                   className={`arrow_right ${this.state.navSlide &&
                     "arrow_right_show"}`}
                 />
+                <h3 className="arrowText">Next Project</h3>
               </Link>
             ) : null}
           </div>

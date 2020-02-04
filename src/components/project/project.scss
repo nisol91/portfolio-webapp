@@ -16,7 +16,7 @@ $card-height: 200px;
 }
 
 .gotoProj {
-	width: 200px;
+	width: 170px;
 	height: 40px;
 	border-radius: 20px;
 	background: $card-point-color;
@@ -35,6 +35,14 @@ $card-height: 200px;
 	}
 }
 
+.arrowText {
+	font-size: 12px;
+	position: absolute;
+	bottom: -100px;
+	transition: .5s;
+
+}
+
 .arrowBtn {
 	width: 100%;
 	height: 100%;
@@ -48,8 +56,17 @@ $card-height: 200px;
 }
 
 .arrowCont {
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+
+	&:hover {
+		.arrowText {
+			bottom: 0;
+			transition: .5s;
+		}
+	}
 }
 
 .backBtn {
@@ -87,6 +104,7 @@ $card-height: 200px;
 	justify-content: center;
 	align-items: center;
 	padding: 50px;
+	width: 80vw;
 
 	.titleProj {
 		width: 50%;
@@ -129,12 +147,12 @@ $card-height: 200px;
 		}
 
 		.img1 {
-			max-width: 90%;
+			max-width: 60%;
 			border-radius: 10px;
 		}
 
 		.img2 {
-			max-width: 90%;
+			max-width: 60%;
 			margin-left: 20%;
 			border-radius: 10px;
 
