@@ -32,9 +32,9 @@ class Projects extends Component {
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log("=====PROJECTS====");
-        console.log(data);
-        console.log("=====PROJECTS====");
+        // console.log("=====PROJECTS====");
+        // console.log(data);
+        // console.log("=====PROJECTS====");
         this.setState({ firebaseProjects: data });
       });
   }
@@ -49,7 +49,7 @@ class Projects extends Component {
         }
       }
     );
-    console.log(await response.json());
+    // console.log(await response.json());
   }
   // getDoggos() {
   //   axios
@@ -66,14 +66,14 @@ class Projects extends Component {
   //       this.setState({ doggos: response.data });
   //     })
   //     .catch(function(error) {
-  //       console.log(error);
+  //       // console.log(error);
   //     });
   //   //cosi controllo la durata del caricamento
   //   setTimeout(() => {
   //     this.setState({
   //       projectsVisibility: true
   //     });
-  //     console.log(this.state.doggos);
+  //     // console.log(this.state.doggos);
   //   }, 3000);
   // }
   getProjects() {
@@ -85,14 +85,14 @@ class Projects extends Component {
         this.setState({ project: response.data });
       })
       .catch(function(error) {
-        console.log(error);
+        // console.log(error);
       });
     //cosi controllo la durata del caricamento
     setTimeout(() => {
       this.setState({
         projectsVisibility: true
       });
-      console.log(this.state.project);
+      // console.log(this.state.project);
     }, 3000);
   }
   animation() {

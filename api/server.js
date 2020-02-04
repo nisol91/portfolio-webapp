@@ -25,7 +25,7 @@ mongoose.connect(dbRoute, { useNewUrlParser: true });
 
 let db = mongoose.connection;
 
-db.once("open", () => console.log("connected to the database"));
+db.once("open", () => // console.log("connected to the database"));
 
 // checks if connection with the database is successful
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
@@ -41,7 +41,7 @@ app.use("/project", projectRoute);
 app.use("/form", formRoute);
 
 // launch our backend into a port
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+app.listen(API_PORT, () => // console.log(`LISTENING ON PORT ${API_PORT}`));
 
 //=============connection to cloud mongoDbAtlas Cluster
 
@@ -71,7 +71,7 @@ app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
 //       }
 //       database = client.db(DATABASE_NAME);
 //       collection = database.collection("project");
-//       console.log("Connected to `" + DATABASE_NAME + "`!");
+//       // console.log("Connected to `" + DATABASE_NAME + "`!");
 //     }
 //   );
 // });
@@ -96,10 +96,10 @@ app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
 // mongoose.Promise = global.Promise;
 // mongoose.connect(config.DB, { useNewUrlParser: true }).then(
 //   () => {
-//     console.log("Database is connected!!!");
+//     // console.log("Database is connected!!!");
 //   },
 //   err => {
-//     console.log("Can not connect to the database" + err);
+//     // console.log("Can not connect to the database" + err);
 //   }
 // );
 // //====
@@ -112,5 +112,5 @@ app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
 // app.use("/form", formRoute);
 
 // app.listen(PORT, function() {
-//   console.log("Server is running on Port:", PORT);
+//   // console.log("Server is running on Port:", PORT);
 // });

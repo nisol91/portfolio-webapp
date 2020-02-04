@@ -94,42 +94,42 @@ class PortfolioSp extends Component {
       aboutVisible: true,
       aboutNavVisible: true
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
 
   onExitViewportAbout = () => {
     this.setState({
       aboutNavVisible: false
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
   onEnterViewportSkills = () => {
     this.setState({
       skillsVisible: true,
       skillsNavVisible: true
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
 
   onExitViewportSkills = () => {
     this.setState({
       skillsNavVisible: false
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
   onEnterViewportProjects = () => {
     this.setState({
       projectsVisible: true,
       projectsNavVisible: true
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
 
   onExitViewportProjects = () => {
     this.setState({
       projectsNavVisible: false
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
 
   onEnterViewportHome = () => {
@@ -137,14 +137,14 @@ class PortfolioSp extends Component {
       homeVisible: true,
       homeNavVisible: true
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
 
   onExitViewportHome = () => {
     this.setState({
       homeNavVisible: false
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
 
   onEnterViewportContacts = () => {
@@ -152,14 +152,14 @@ class PortfolioSp extends Component {
       contactsVisible: true,
       contactsNavVisible: true
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
 
   onExitViewportContacts = () => {
     this.setState({
       contactsNavVisible: false
     });
-    console.log(this.state.visible);
+    // console.log(this.state.visible);
   };
 
   handleScroll = () => {
@@ -175,7 +175,7 @@ class PortfolioSp extends Component {
     if (window.scrollY < "100") {
       this.setState({ toggleNav: false });
     }
-    // console.log(window.scrollY);
+    // // console.log(window.scrollY);
   };
 
   //==============
@@ -187,13 +187,13 @@ class PortfolioSp extends Component {
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log("=========");
-        console.log(data);
-        console.log("=========");
+        // console.log("=========");
+        // console.log(data);
+        // console.log("=========");
       });
   }
   addProject() {
-    console.log("inizio");
+    // console.log("inizio");
 
     db.collection("projects")
       .add({
@@ -201,7 +201,7 @@ class PortfolioSp extends Component {
         description: "bello"
       })
       .then(function() {
-        console.log("Document successfully written!");
+        // console.log("Document successfully written!");
       })
       .catch(function(error) {
         console.error("Error writing document: ", error);

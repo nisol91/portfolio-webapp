@@ -49,13 +49,13 @@ class Home extends Component {
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log("=========");
-        console.log(data);
-        console.log("=========");
+        // console.log("=========");
+        // console.log(data);
+        // console.log("=========");
       });
   }
   addProject() {
-    console.log("inizio");
+    // console.log("inizio");
 
     db.collection("projects")
       .add({
@@ -63,7 +63,7 @@ class Home extends Component {
         description: "bello"
       })
       .then(function() {
-        console.log("Document successfully written!");
+        // console.log("Document successfully written!");
       })
       .catch(function(error) {
         console.error("Error writing document: ", error);

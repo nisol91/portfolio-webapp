@@ -24,7 +24,7 @@ businessRoutes.route('/add').post(function (req, res) {
 businessRoutes.route('/').get(function (req, res) {
 	Business.find(function (err, businesses) {
 		if (err) {
-			console.log(err);
+			// console.log(err);
 		}
 		else {
 			res.json(businesses);

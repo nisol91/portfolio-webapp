@@ -26,7 +26,7 @@ export default class Card extends Component {
       this.setState({
         imageLoaded: true
       });
-      console.log(this.state.imageLoaded);
+      // console.log(this.state.imageLoaded);
     }, 0);
   }
   componentDidMount() {}

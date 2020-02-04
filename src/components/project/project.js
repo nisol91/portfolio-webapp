@@ -38,14 +38,14 @@ export default class Project extends Component {
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log("=====PROJECTS in project====");
-        console.log(data[0].img[1]);
-        console.log("=====PROJECTS====");
+        // console.log("=====PROJECTS in project====");
+        // console.log(data[0].img[1]);
+        // console.log("=====PROJECTS====");
         this.setState({
           project: data[0],
           images: data[0].img
         });
-        console.log(this.state.images);
+        // console.log(this.state.images);
         var arr = [];
         var len = this.state.images.length;
         for (var i = 0; i < len; i++) {
@@ -58,7 +58,7 @@ export default class Project extends Component {
           imagesForGallery: arr
         });
 
-        console.log(arr);
+        // console.log(arr);
       });
   }
 
@@ -69,8 +69,8 @@ export default class Project extends Component {
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log("=====QUANTI PROGETTI?====");
-        console.log(data.length);
+        // console.log("=====QUANTI PROGETTI?====");
+        // console.log(data.length);
         this.setState({ projectLenght: data.length });
       });
   }
@@ -79,7 +79,7 @@ export default class Project extends Component {
       this.setState({
         imageLoaded: true
       });
-      console.log(this.state.imageLoaded);
+      // console.log(this.state.imageLoaded);
     }, 0);
   }
   changeProj() {
@@ -97,7 +97,7 @@ export default class Project extends Component {
       projectId: projID
     });
     this.fetchProjects(projID);
-    console.log(projID);
+    // console.log(projID);
   }
 
   showGallery() {

@@ -16,8 +16,8 @@ class App extends Component {
   }
 
   render() {
-    console.log(process.env.REACT_APP_VAR);
-    console.log(process.env.REACT_APP_GET_PROJECTS);
+    // console.log(process.env.REACT_APP_VAR);
+    // console.log(process.env.REACT_APP_GET_PROJECTS);
 
     return (
       <I18nextProvider i18n={i18n}>

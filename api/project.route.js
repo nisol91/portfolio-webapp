@@ -23,7 +23,7 @@ let Project = require("./project.model");
 projectRoutes.route("/").get(function(req, res) {
   Project.find(function(err, projects) {
     if (err) {
-      console.log(err);
+      // console.log(err);
     } else {
       res.json(projects);
     }
