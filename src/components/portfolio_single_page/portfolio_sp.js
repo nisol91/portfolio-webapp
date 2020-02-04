@@ -302,7 +302,7 @@ class PortfolioSp extends Component {
               this.setState({ scrollContacts: true, scrollProjects: true });
 
               setTimeout(() => {
-                this.scrollTo("contacts", 10);
+                this.scrollTo("contacts", -5);
               }, 300);
             }}
           >
