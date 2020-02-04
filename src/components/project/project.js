@@ -11,6 +11,7 @@ import {
   faWindowClose
 } from "@fortawesome/free-solid-svg-icons";
 import ImageGallery from "react-image-gallery";
+import ReactPlayer from "react-player";
 
 export default class Project extends Component {
   constructor(props) {
@@ -24,11 +25,13 @@ export default class Project extends Component {
       projectLenght: 0,
       images: [],
       showGallery: false,
-      imagesForGallery: []
+      imagesForGallery: [],
+      showVideo: false
     };
     this.handleImageLoaded = this.handleImageLoaded.bind(this);
     this.changeProj = this.changeProj.bind(this);
     this.showGallery = this.showGallery.bind(this);
+    this.showVideo = this.showVideo.bind(this);
   }
 
   async fetchProjects(projID) {
@@ -100,6 +103,12 @@ export default class Project extends Component {
     // console.log(projID);
   }
 
+  showVideo() {
+    this.setState({
+      showVideo: !this.state.showVideo
+    });
+  }
+
   showGallery() {
     this.setState({
       showGallery: !this.state.showGallery
@@ -156,6 +165,21 @@ export default class Project extends Component {
                   </div>
                 </a>
               ) : null}
+              {this.state.project.video != null ? (
+                <div className="gotoProj">
+                  <div
+                    className="btnProjText lineThrough"
+                    onClick={this.showVideo}
+                  >
+                    {!this.state.showVideo ? "See the video" : "Hide the video"}
+                  </div>
+                </div>
+              ) : null}
+              {this.state.showVideo ? (
+                <div className="reactPlayer">
+                  <ReactPlayer url={this.state.project.video} playing />
+                </div>
+              ) : null}
             </div>
             <div className="imgContainer">
               {!this.state.imageLoaded && (
@@ -179,6 +203,7 @@ export default class Project extends Component {
                   />
                 </div>
               ) : null}
+
               {this.state.showGallery ? (
                 <div className="imgGalleryCont">
                   <div className="showGallery" onClick={this.showGallery}>
