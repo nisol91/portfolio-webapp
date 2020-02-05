@@ -175,7 +175,7 @@ class PortfolioSp extends Component {
     if (window.scrollY < "100") {
       this.setState({ toggleNav: false });
     }
-    // // console.log(window.scrollY);
+    console.log(window.scrollY);
   };
 
   //==============
@@ -316,9 +316,7 @@ class PortfolioSp extends Component {
         </div>
 
         <div>
-          <div>
-            <ToastContainer />
-          </div>
+          <div>{/* <ToastContainer /> */}</div>
         </div>
         {this.state.scrollProjects ? (
           <div>

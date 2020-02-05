@@ -34,8 +34,8 @@
 	#s,
 	#t,
 	#c {
-		width: 250px !important;
-		height: 250px !important;
+		width: 450px !important;
+		height: 450px !important;
 	}
 }
 
@@ -48,8 +48,8 @@
 	#s,
 	#t,
 	#c {
-		width: 250px !important;
-		height: 250px !important;
+		width: 400px !important;
+		height: 400px !important;
 	}
 }
 
@@ -62,8 +62,8 @@
 	#s,
 	#t,
 	#c {
-		width: 300px !important;
-		height: 300px !important;
+		width: 400px !important;
+		height: 400px !important;
 	}
 }
 
@@ -146,11 +146,11 @@
 	}
 
 	.cardCont {
-		width: 70vw !important;
+		width: 90vw !important;
 		height: 100px !important;
 
 		margin: 0 !important;
-		margin-bottom: 15px !important;
+		margin-bottom: 50px !important;
 
 		.shape {
 			display: inherit !important;
@@ -191,7 +191,7 @@
 	.skillsdx {
 		width: 100% !important;
 		margin-left: 0 !important;
-		margin-top: 100px !important;
+		margin-top: 50px !important;
 	}
 
 	.myBtnContact {
@@ -270,6 +270,10 @@
 //================
 
 @media (max-width: 768px) {
+	.imgFooter {
+		width: 15% !important;
+
+	}
 
 	.img1,
 	.img2 {
@@ -343,6 +347,12 @@
 //================
 
 @media (max-width: 576px) {
+
+	.imgFooter {
+		width: 20% !important;
+
+	}
+
 	.contact {
 		padding: 30px !important;
 	}
@@ -381,6 +391,15 @@
 		transform: translateX(-150px) !important;
 		opacity: 0.95;
 	}
+
+	.home1,
+	.home2,
+	.home3,
+	.myBtnContact {
+		margin-top: 70px !important;
+
+	}
+
 
 	.home1,
 	.skills1,

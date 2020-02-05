@@ -27,6 +27,7 @@ class About extends Component {
           <h1 className="about1 text-flicker-in-glow">{t("about_studio")}</h1>
           {/* <h1 className="about2 tracking-in-expand">good at:</h1> */}
           <h1 className="about3 swing-in-top-fwd">{t("studio_story")}</h1>
+          <h1 className="about3 swing-in-top-fwd">{t("studio_story_2")}</h1>
         </div>
         <div className={`fade-in ${this.state.cubeVisibility && "visible"}`}>
           <Triangle></Triangle>

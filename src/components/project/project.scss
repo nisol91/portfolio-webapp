@@ -7,9 +7,11 @@ $card-height: 200px;
 .imgGalleryCont {
   //   width: 90vw;
 }
+
 .reactPlayer {
   margin-top: 30px;
 }
+
 .showGallery {
   width: 20px;
   height: 20px;
@@ -49,6 +51,9 @@ $card-height: 200px;
   height: 100%;
   font-size: 30px;
   transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     font-size: 40px;
@@ -61,6 +66,7 @@ $card-height: 200px;
   height: 80px;
   overflow: hidden;
   position: relative;
+
 
   &:hover {
     .arrowText {

@@ -24,6 +24,8 @@
 	padding-bottom: 0;
 	display: flex;
 	justify-content: center;
+	background: $nav-background-color-nav;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
 
 	.works {
 		width: 60%;
@@ -38,6 +40,7 @@
 
 	.textPortfolio {
 		width: 40%;
+		margin-bottom: 50px;
 
 		.port1 {
 			font-size: 70px;
