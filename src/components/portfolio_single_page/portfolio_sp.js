@@ -175,7 +175,7 @@ class PortfolioSp extends Component {
     if (window.scrollY < "100") {
       this.setState({ toggleNav: false });
     }
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
   };
 
   //==============
