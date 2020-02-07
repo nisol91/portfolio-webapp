@@ -87,7 +87,8 @@ export default class Project extends Component {
   }
   changeProj() {
     this.setState({
-      showGallery: false
+      showGallery: false,
+      showVideo: false
     });
 
     setTimeout(() => {
@@ -171,7 +172,9 @@ export default class Project extends Component {
                     className="btnProjText lineThrough"
                     onClick={this.showVideo}
                   >
-                    {!this.state.showVideo ? "See the video" : "Hide the video"}
+                    {!this.state.showVideo
+                      ? "Show the video"
+                      : "Hide the video"}
                   </div>
                 </div>
               ) : null}
