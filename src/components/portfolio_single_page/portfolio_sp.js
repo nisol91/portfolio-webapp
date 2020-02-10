@@ -299,7 +299,11 @@ class PortfolioSp extends Component {
             to={""}
             className="mylink_portfolio"
             onClick={() => {
-              this.setState({ scrollContacts: true, scrollProjects: true });
+              this.setState({
+                scrollContacts: true,
+                scrollProjects: true,
+                contactsVisible: true
+              });
 
               setTimeout(() => {
                 this.scrollTo("contacts", -5);
