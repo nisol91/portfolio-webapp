@@ -260,7 +260,11 @@ class PortfolioSp extends Component {
                   item.name === "Contact" &&
                   "active"}`}
                 onClick={() => {
-                  this.setState({ scrollContacts: true, scrollProjects: true });
+                  this.setState({
+                    scrollContacts: true,
+                    scrollProjects: true,
+                    contactsVisible: true
+                  });
                   setTimeout(() => {
                     this.scrollTo(item.ref, item.offset);
                   }, 300);
