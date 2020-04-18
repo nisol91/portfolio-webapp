@@ -8,6 +8,8 @@ import cssLogo from "../../img/css.png";
 import dartLogo from "../../img/dart.png";
 import flutterLogo from "../../img/flutter.png";
 import jsLogo from "../../img/js.png";
+import phpLogo from "../../img/php.png";
+
 
 import "./skills.scss";
 
@@ -27,7 +29,9 @@ class Skills extends Component {
         { id: 6, name: "dart", src: dartLogo },
         { id: 6, name: "html", src: htmlLogo },
         { id: 6, name: "css", src: cssLogo },
-        { id: 7, name: "flutter", src: flutterLogo }
+        { id: 7, name: "flutter", src: flutterLogo },
+        { id: 8, name: "php", src: phpLogo }
+
       ]
     };
   }
@@ -50,7 +54,7 @@ class Skills extends Component {
           <h1 className="skills1 text-flicker-in-glow">{t("the_skillset")}</h1>
           <h1 className="skills2 tracking-in-expand">good at:</h1>
           <h1 className="skills3 swing-in-top-fwd">
-            JavaScript, React, Dart, Flutter, Html, Css
+            JavaScript, React, Dart, Flutter, Php, Html, Css
           </h1>
         </div>
         <div className={`skillsdx fade-in ${this.state.cubeShow && "visible"}`}>
