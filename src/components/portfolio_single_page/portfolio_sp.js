@@ -60,7 +60,7 @@ class PortfolioSp extends Component {
         { id: 1, name: "Home", ref: "home", offset: 0 },
         { id: 2, name: "Projects", ref: "projects", offset: -80 },
         { id: 3, name: "About", ref: "about", offset: -80 },
-        { id: 4, name: "Skills", ref: "skills", offset: -80 },
+        { id: 4, name: "Skills&Services", ref: "skills", offset: -80 },
         { id: 5, name: "Contact", ref: "contacts", offset: 10 }
       ]
     };
@@ -200,10 +200,10 @@ class PortfolioSp extends Component {
         name: " projectLos Angeles",
         description: "bello"
       })
-      .then(function() {
+      .then(function () {
         // console.log("Document successfully written!");
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.error("Error writing document: ", error);
       });
   }

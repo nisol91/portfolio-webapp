@@ -19,13 +19,20 @@
 		font-size: 50px;
 		font-weight: bold;
 		margin-top: 10px;
-		margin-bottom: 50px;
+		margin-bottom: 10px;
 	}
 
 	.skills3 {
-		font-size: 35px;
+		font-size: 32px;
 		font-weight: bold;
 		margin-top: 50px;
+		color: $nav-background-color;
+	}
+
+	.skills4 {
+		font-size: 25px;
+		font-weight: bold;
+		margin-top: 10px;
 		color: $nav-background-color;
 	}
 
@@ -41,9 +48,9 @@
 }
 
 .card_skills {
-	margin: 10px;
-	width: 150px;
-	height: 80px;
+	margin: 8px;
+	width: 140px;
+	height: 70px;
 	background: white;
 	border-radius: 10px;
 	display: flex;

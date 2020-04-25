@@ -56,7 +56,7 @@ class Navbar extends Component {
   hiddenOverlay() {
     this.setState({ showOverlay: false });
   }
-  componentDidMount() {}
+  componentDidMount() { }
   render() {
     // ==handling css classes==
     let className_1 = "mynavbar";
@@ -137,7 +137,7 @@ class Navbar extends Component {
             />
           </Link>
           <Link to={"/skills"} className="mylink" onClick={this.showNav}>
-            <h1 className={className_2}>Skills</h1>
+            <h1 className={className_2}>Services</h1>
             <img
               className={`homeIcon skillsIcon ${this.state.navSlide &&
                 "show_icon"}`}

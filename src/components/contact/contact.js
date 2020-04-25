@@ -24,15 +24,15 @@ class Contact extends Component {
   onDismiss() {
     this.setState({ visible: false });
   }
-  componentDidMount() {}
+  componentDidMount() { }
   render() {
     const { t } = this.props;
 
     return (
       <div className="contact">
-        <h1 className="contact2 tracking-in-expand">Stay in touch</h1>
+        <h1 className="contact2 tracking-in-expand">For info and pricing</h1>
 
-        <h1 className="contact2 tracking-in-expand">inlandsis871@gmail.com</h1>
+        <h1 className="contact2 tracking-in-expand">nszdevstudio@gmail.com</h1>
       </div>
     );
   }

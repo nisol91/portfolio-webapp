@@ -9,7 +9,8 @@ import dartLogo from "../../img/dart.png";
 import flutterLogo from "../../img/flutter.png";
 import jsLogo from "../../img/js.png";
 import phpLogo from "../../img/php.png";
-
+import wpLogo from "../../img/wp.png";
+import reactNativeLogo from "../../img/reactNative.png";
 
 import "./skills.scss";
 
@@ -24,21 +25,22 @@ class Skills extends Component {
       cubeShow: false,
       stackItems: [
         { id: 1, name: "react", src: reactLogo },
-        { id: 2, name: "firebase", src: firebaseLogo },
+        { id: 2, name: "firebase", src: reactNativeLogo },
         { id: 5, name: "js", src: jsLogo },
         { id: 6, name: "dart", src: dartLogo },
         { id: 6, name: "html", src: htmlLogo },
         { id: 6, name: "css", src: cssLogo },
         { id: 7, name: "flutter", src: flutterLogo },
-        { id: 8, name: "php", src: phpLogo }
-
-      ]
+        { id: 8, name: "php", src: phpLogo },
+        { id: 9, name: "wp", src: wpLogo },
+        { id: 10, name: "firebaseLogo", src: firebaseLogo },
+      ],
     };
   }
   animation() {
     setTimeout(() => {
       this.setState({
-        cubeShow: true
+        cubeShow: true,
       });
     }, 0);
   }
@@ -51,14 +53,31 @@ class Skills extends Component {
     return (
       <div className="boxSkills">
         <div className="skillssx">
-          <h1 className="skills1 text-flicker-in-glow">{t("the_skillset")}</h1>
-          <h1 className="skills2 tracking-in-expand">good at:</h1>
-          <h1 className="skills3 swing-in-top-fwd">
-            JavaScript, React, Dart, Flutter, Php, Html, Css
-          </h1>
+          <h1 className="skills2 tracking-in-expand">services:</h1>
+          <ul>
+            <li>
+              <h1 className="skills3 swing-in-top-fwd">
+                web or mobile app creation
+              </h1>
+            </li>
+            <li>
+              <h1 className="skills3 swing-in-top-fwd">
+                web or mobile app advice
+              </h1>
+            </li>
+            <li>
+              <h1 className="skills3 swing-in-top-fwd">
+                wordpress website or e-commerce
+              </h1>
+            </li>
+          </ul>
         </div>
         <div className={`skillsdx fade-in ${this.state.cubeShow && "visible"}`}>
           <h1 className="skills2 tracking-in-expand">the stack:</h1>
+          <h1 className="skills4 swing-in-top-fwd">
+            JavaScript[React, React Native, Vue, Angular], Dart[Flutter],
+            Php[Wordpress, Laravel]
+          </h1>
           <div className="skillCardBox">
             {this.state.stackItems.map((item, key) => (
               <React.Fragment key={key}>
