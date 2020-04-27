@@ -73,7 +73,7 @@ class Skills extends Component {
           </ul>
         </div>
         <div className={`skillsdx fade-in ${this.state.cubeShow && "visible"}`}>
-          <h1 className="skills2 tracking-in-expand">the stack:</h1>
+          <h1 className="skills2 tracking-in-expand">stack:</h1>
           <h1 className="skills4 swing-in-top-fwd">
             JavaScript[React, React Native, Vue, Angular], Dart[Flutter],
             Php[Wordpress, Laravel]

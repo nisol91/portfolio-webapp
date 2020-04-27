@@ -140,7 +140,7 @@ class Projects extends Component {
                 "visible slide-in-tr"}`}
             >
               <h1 className="port1">{t("the_work")}</h1>
-              <h1 className="port2">Check them out</h1>
+              {/* <h1 className="port2">Check them out</h1> */}
             </div>
           ) : null}
           <div
