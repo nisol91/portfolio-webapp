@@ -29,7 +29,7 @@ export default class Card extends Component {
       // console.log(this.state.imageLoaded);
     }, 0);
   }
-  componentDidMount() {}
+  componentDidMount() { }
 
   render() {
     return (
@@ -51,6 +51,8 @@ export default class Card extends Component {
             <div className="show" onClick={this.showProject}>
               <h1 className="showText textCardColor">SHOW ME</h1>
             </div>
+            <h1 className="cardTitleName">{this.props.datiPerCard.name}</h1>
+
           </Link>
           {!this.state.imageLoaded && (
             <Spinner color="primary" className="imgSpinner" />
@@ -63,7 +65,6 @@ export default class Card extends Component {
           />
         </div>
 
-        {/* <h1 className="cardFont">{this.props.datiPerCard.id}</h1> */}
         {/* <h1 className="cardFont">{this.props.datiPerCard.project_date}</h1> */}
         {/* <h1 className="cardFont"> */}
         {/* {this.props.datiPerCard.project_description} */}

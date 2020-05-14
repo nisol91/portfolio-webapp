@@ -98,3 +98,12 @@ $card-height: 200px;
 .showProject {
 	display: inherit;
 }
+
+.cardTitleName {
+	font-size: 13px;
+	color: rgba(7, 9, 41, 0.609);
+	z-index: 9999 !important;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
