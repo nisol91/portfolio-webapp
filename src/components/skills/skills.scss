@@ -42,7 +42,7 @@
 	}
 
 	.skillsdx {
-		width: 50%;
+		width: 80%;
 		margin-left: 5%;
 	}
 }
@@ -77,4 +77,8 @@
 	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+.hideSkills {
+	display: none;
 }

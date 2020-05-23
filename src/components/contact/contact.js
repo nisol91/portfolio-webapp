@@ -30,7 +30,7 @@ class Contact extends Component {
 
     return (
       <div className="contact">
-        <h1 className="contact2 tracking-in-expand">For info and pricing</h1>
+        <h1 className="contact2 tracking-in-expand">Contact:</h1>
 
         <h1 className="contact2 tracking-in-expand">nszdevstudio@gmail.com</h1>
       </div>

@@ -11,6 +11,8 @@ import jsLogo from "../../img/js.png";
 import phpLogo from "../../img/php.png";
 import wpLogo from "../../img/wp.png";
 import reactNativeLogo from "../../img/reactNative.png";
+import goLogo from "../../img/goLogo.png";
+
 
 import "./skills.scss";
 
@@ -34,6 +36,8 @@ class Skills extends Component {
         { id: 8, name: "php", src: phpLogo },
         { id: 9, name: "wp", src: wpLogo },
         { id: 10, name: "firebaseLogo", src: firebaseLogo },
+        { id: 11, name: "goLogo", src: goLogo },
+
       ],
     };
   }
@@ -52,7 +56,7 @@ class Skills extends Component {
 
     return (
       <div className="boxSkills">
-        <div className="skillssx">
+        <div className="skillssx hideSkills">
           <h1 className="skills2 tracking-in-expand">services:</h1>
           <ul>
             <li>
